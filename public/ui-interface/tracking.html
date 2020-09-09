@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Simon Stromae">
+	<title>Tracking · Template</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+	<!-- Custom fonts for this template-->
+	<link href="css/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Main core CSS -->
+    <link href="css/main.css" rel="stylesheet">
+    
+    <style>
+        
+    </style>
+</head>
+<body class="d-flex flex-column h-100">
+  <div class="d-none d-sm-block bg-black p-2 text-center text-white" style="font-family: nexa-book">
+      <span>" Une Equipe de professionels pour vous offrir le service de vos rêves "</span>  
+  </div>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light shadow-sm">
+    <a class="ml-3 navbar-brand text-primary" href="#"><img src="brand/logo.png" width="125"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="ml-auto mr-5">
+      <ul class="navbar-nav mr-auto ">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">Livraison / Expédition</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+      </ul>
+      </div>
+      <form class="row form-inline align-item-center d-flex justify-content-center">
+        <a href="login.html" class="shadow-sm rounded-0 btn btn-outline-primary btn-md mb-2 text-sm">Se connecter</a>
+        <a href="tracking.html" class="shadow-sm rounded-0 btn btn-md btn-danger mx-2 mb-2 text-sm">Entrer votre besoin</a>
+      </form>
+    </div>
+  </nav>
+	
+  <div id="carouselExampleSlidesOnly" class="w-100 carousel slide carousel-fade d-none d-md-block" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="brand/slider/Artboard1.png" alt="1-slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="brand/slider/Artboard2.png" alt="2-slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="brand/slider/Artboard3.png" alt="3-slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="brand/slider/Artboard4.png" alt="4-slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="brand/slider/Artboard5.png" alt="5-slide">
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile interface -->
+  <div class="container-fluid p-5 text-center d-block d-sm-none" style="background: url('brand/background/bg_tracking_mobile.jpg');">
+    <h4 class="mb-3 text-capitalize text-white">Mon Compte</h4>
+  </div>
+
+  <div class="main">
+    <div class="container mb-5 text-dark">
+      <div class="mt-5 rounded-0">
+        <div class="card-body">
+          <div class="text-center">
+            <h5 class="card-title mt-3 text-primary">De quoi avez-vous besoin ?</h5>
+            <p class="card-subtitle m-2 p-1">Entrer les informations et descriptions du produit que vous souhaitez obtenir.</p>
+          </div>
+
+          <form>
+            <div class="row">
+              <div class="col-md-6 col-sm-12 form-group">
+                <label for="name_product" class="title-label">Nom du produit</label>
+                <input type="text" id="name_product" class="form-control rounded-0">
+              </div>
+
+              <div class="col-md-6 col-sm-12 form-group">
+                <label for="mark_product" class="title-label">Marque</label>
+                <input type="text" id="mark_product" class="form-control rounded-0">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-sm-12 form-group">
+                <label for="category_product" class="title-label">Catégorie</label>
+                <select id="category_product" class="form-control rounded-0">
+                  <option>Sélectionnez une catégorie...</option>
+                  <option>Immobilier</option>
+                  <option>Alimentaire</option>
+                  <option>Vestimentaire</option>
+                  <option>Beauté</option>
+                  <option>Santé</option>
+                  <option>Electronique</option>
+                </select>
+              </div>
+
+              <div class="col-md-6 col-sm-12 form-group">
+                <label for="budget_product" class="title-label">Budget (Fcfa)</label>
+                <input type="text" id="budget_product" class="form-control rounded-0">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="Description" class="title-label">Description</label>
+              <textarea class="form-control rounded-0"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="image" class="title-label">Image <small>(facultatif)</small></label>
+              <input type="file" id="image" class="form-control-file">
+            </div>
+
+            <div class="form-group">
+              <a href="customer-information.html" class="btn btn-primary rounded-0 shadow-sm mt-3 float-right">Suivant</a>
+            </div>
+          </form>
+        </div>  
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg footer mt-auto py-2">
+    <div class="container text-xs">
+      <div class="row">
+        <p class="d-none d-sm-block col-md-6 col-sm-6 links mt-3">
+          <a href="#" class="text-uppercase text-dark font-weight-bold">Livraison / Expedition</a>
+          <a href="#" class="text-uppercase text-dark font-weight-bold">Contact</a>
+          <a href="#" class="text-uppercase text-dark font-weight-bold">FAQ</a>
+        </p>
+        <p class="col-md-6 col-sm-6 icons mt-3 text-center">
+            <img src="css/fontawesome-free/svgs/brands/facebook-square.svg" width="15">
+            <img src="css/fontawesome-free/svgs/brands/twitter.svg" width="15">
+            <img src="css/fontawesome-free/svgs/brands/instagram.svg" width="15">
+            <img src="css/fontawesome-free/svgs/brands/linkedin.svg" width="15">
+        </p>
+      </div>
+      <center>&copy; Copyright 2020. Designed By <b>Simon Stromae</b></center>
+    </div>
+  </footer>
+  
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Simon Stromae">
+	<title>Tracking · Template</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+	<!-- Custom fonts for this template-->
+	<link href="css/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Main core CSS -->
+    <link href="css/main.css" rel="stylesheet">
+    
+    <style>
+        
+    </style>
+</head>
+<body class="d-flex flex-column h-100">
+  <div class="d-none d-sm-block bg-black p-2 text-center text-white" style="font-family: nexa-book">
+      <span>" Une Equipe de professionels pour vous offrir le service de vos rêves "</span>  
+  </div>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light shadow-sm">
+    <a class="ml-3 navbar-brand text-primary" href="#"><img src="brand/logo.png" width="125"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="ml-auto mr-5">
+      <ul class="navbar-nav mr-auto ">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">Livraison / Expédition</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+      </ul>
+      </div>
+      <form class="row form-inline align-item-center d-flex justify-content-center">
+        <a href="login.html" class="shadow-sm rounded-0 btn btn-outline-primary btn-md mb-2 text-sm">Se connecter</a>
+        <a href="tracking.html" class="shadow-sm rounded-0 btn btn-md btn-danger mx-2 mb-2 text-sm">Entrer votre besoin</a>
+      </form>
+    </div>
+  </nav>
+	
+  <div class="container-fluid p-5 text-dark text-center d-none d-md-block" style="background: url('brand/background/bg_checkout.jpg');">
+    <h4 class="mb-3 text-capitalize text-white">Information personnelle</h4>
+    <p class="wizard w-100">
+      <span class="text-success h6 font-weight-bold"><i class="fa fa-check-circle"></i> Mon besoin</span>
+    </p> 
+  </div>
+
+  <!-- background mobile -->
+  <div class="container-fluid p-5 text-center d-block d-sm-none" style="background: url('brand/background/bg_checkout_mobile.jpg');">
+    <h4 class="mb-3 text-capitalize text-white">Information personnelle</h4>
+    <p class="wizard w-100">
+      <span class="text-success h6 font-weight-bold"><i class="fa fa-check-circle"></i> Mon besoin</span>
+    </p>
+  </div>  
+
+  <div class="main">
+    <div class="container mb-5 text-dark">
+      <div class="row">
+        <div class="col-md-8 col-sm-12"> 
+          <div class="mt-5 rounded-0">
+            <div class="card-body">
+              <div class="py-2 w-100 badge badge-light text-sm">Déjà Client ? <a class="ml-1" href="login.html">S'identifier</a></div>
+
+              <h5 class="card-title mt-3 text-dark">Détails livraison</h5>
+              <hr>
+
+              <form>
+                <div class="form-group">
+                  <label for="firstnale" class="title-label">Nom</label>
+                  <input type="text" id="firstname" class="form-control rounded-0">
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 col-sm-12 form-group">
+                    <label for="email" class="title-label">Email</label>
+                    <input type="text" id="email" class="form-control rounded-0">
+                  </div>
+
+                  <div class="col-md-6 col-sm-12 form-group">
+                    <label for="tel" class="title-label">Numéro téléphone</label>
+                    <input type="tel" id="tel" class="form-control rounded-0">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-4 col-sm-12 form-group">
+                    <label for="country" class="title-label">Pays</label>
+                    <input type="text" id="country" class="form-control rounded-0">
+                  </div>
+                  <div class="col-md-4 col-sm-12 form-group">
+                    <label for="city" class="title-label">Ville</label>
+                    <input type="text" id="city" class="form-control rounded-0">
+                  </div>
+
+                  <div class="col-md-4 col-sm-12 form-group">
+                    <label for="quater" class="title-label">Quartier</label>
+                    <input type="text" id="quater" class="form-control rounded-0">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="landmark" class="title-label">Repère</label>
+                  <input type="text" id="landmark" class="form-control rounded-0">
+                </div>
+
+                <div class="form-group">
+                  <label for="particlar_landmark" class="title-label">Repère particulier</label>
+                  <input type="text" id="particlar_landmark" class="form-control rounded-0">
+                </div>
+
+                <div class="mt-4 custom-control custom-checkbox">
+                  <input type="checkbox" id="term" class="custom-control-input" checked>
+                  <label for="term" class="custom-control-label title-label">J'ai lu et j'accepte les <a href="#">termes et conditions</a></label>
+                </div>
+
+                <div class="mt-1 custom-control custom-checkbox">
+                  <input type="checkbox" id="register" class="custom-control-input">
+                  <label for="register" class="custom-control-label title-label">Créer un compte ?</label>
+                </div>
+
+                <div class="form-group float-right">
+                  <a href="tracking.html" class="btn btn-outline-dark rounded-0 shadow-sm mt-3">
+                    Modifier mon besoin
+                  </a>
+
+                  <a href="tracking-summary.html" class="btn btn-primary rounded-0 shadow-sm mt-3">
+                    Suivant
+                  </a>
+                </div>
+              </form>
+            </div>  
+          </div>
+        </div> 
+
+        <div class="col-md-4 col-sm-12">
+          <div class="bg-light card mt-5 border-white rounded-0">
+            <div class="card-body">
+              <h6 class="card-title mt-3">Mon Besoin</h6>
+              <table class="table">
+                <tr>
+                  <td>Nom</td>
+                  <td class="text-right">Iphone 6s</td>
+                </tr>
+                <tr>
+                  <td>Marque</td>
+                  <td class="text-right">Apple</td>
+                </tr>
+                <tr>
+                  <td>Budget</td>
+                  <td class="text-right">100.000 Fcfa</td>
+                </tr>
+                <tr>
+                  <td>Description</td>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg footer mt-auto py-2">
+    <div class="container text-xs">
+      <div class="row">
+        <p class="d-none d-sm-block col-md-6 col-sm-6 links mt-3">
+          <a href="#" class="text-uppercase text-dark font-weight-bold">Livraison / Expedition</a>
+          <a href="#" class="text-uppercase text-dark font-weight-bold">Contact</a>
+          <a href="#" class="text-uppercase text-dark font-weight-bold">FAQ</a>
+        </p>
+        <p class="col-md-6 col-sm-6 icons mt-3 text-center">
+            <img src="css/fontawesome-free/svgs/brands/facebook-square.svg" width="15">
+            <img src="css/fontawesome-free/svgs/brands/twitter.svg" width="15">
+            <img src="css/fontawesome-free/svgs/brands/instagram.svg" width="15">
+            <img src="css/fontawesome-free/svgs/brands/linkedin.svg" width="15">
+        </p>
+      </div>
+      <center>&copy; Copyright 2020. Designed By <b>Simon Stromae</b></center>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
