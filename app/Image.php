@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Image extends Model
 {
+    public $timestamps = false;
+
     protected $guarded = [];
 
     public function track(){
-        $this->belongsTo('App\Track');
+        return $this->belongsTo('App\Track');
     }
 }

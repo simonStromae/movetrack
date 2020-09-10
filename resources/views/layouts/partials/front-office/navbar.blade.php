@@ -43,7 +43,7 @@
                     </div>
                 </div>
             @endguest
-                <a href="#" class="shadow-sm rounded-0 btn btn-md btn-danger mx-2 mb-2 text-sm">Entrer votre besoin</a>
+                <a href="{{ route('add-track') }}" class="shadow-sm rounded-0 btn btn-md btn-danger mx-2 mb-2 text-sm">Entrer votre besoin</a>
         </div>
     </div>
 </nav>

@@ -14,14 +14,37 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Welcome-page
+/*
+|--------------------------------------------------------------------------
+| STROMAE ROUTES
+|--------------------------------------------------------------------------
+*/
+
 Route::view('/', 'welcome')->name('welcome');
 
-//DeliveryExpedition-page
 Route::view('/livraison-expedition', 'pages.about')->name('about');
 
-//Contact-page
 Route::view('/contact', 'pages.contact')->name('contact');
+
+Route::namespace('Stromae')->group(function(){
+    Route::get('/add-track', 'TrackingController@addTrack')->name('add-track');
+    Route::get('/add-track/{id}/edit', 'TrackingController@editTrack')->name('edit-track');
+
+    Route::prefix('/track-{id}')->group(function(){
+        Route::get('/customer-information', 'TrackingController@checkout')->name('checkout');
+        Route::get('/summary', 'TrackingController@summary')->name('recap');
+        Route::get('/finish', 'TrackingController@finish')->name('finish');
+    });
+
+    Route::get('/my-account', 'ProfileController@account')->name('my-account');
+});
+
+/*
+|--------------------------------------------------------------------------
+| END STROMAE ROUTES
+|--------------------------------------------------------------------------
+*/
+
 
 //page d'erreurs
 Route::fallback(function (){
@@ -31,6 +54,5 @@ Route::fallback(function (){
 Route::view('error_503', 'errors.503')->name('error-503');
 
 Auth::routes();
-Route::get('/my-account', 'Stromae\ProfileController@account')->name('my-account');
 
 Route::get('/home', 'HomeController@index')->name('home');

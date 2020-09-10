@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
+    public $timestamps = false;
+
     protected $guarded = [];
 
     public function users(){
-        $this->hasMany('App\User');
+        return $this->hasMany('App\User');
     }
 }

@@ -6,13 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Track extends Model
 {
+    public $timestamps = false;
+
     protected $guarded = [];
 
     public function category(){
-        $this->belongsTo('App\Category');
+        return $this->belongsTo('App\Category');
     }
 
     public function images(){
-        $this->hasMany('App\Image');
+        return $this->hasMany('App\Image');
     }
 }

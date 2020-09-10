@@ -19,6 +19,7 @@
     <style>
 
     </style>
+    @livewireStyles
     @notifyCss
 </head>
 <body class=" @if(!Request::is('login') && !Request::is('register') && !Request::is('password/reset')) d-flex flex-column h-100 @else bg-primary-2 @endif ">
@@ -36,6 +37,8 @@
 @endif
 
 @include('notify::messages')
+
+@livewireScripts
 
 <script type="text/javascript" src="/front-office/js/jquery.min.js"></script>
 <script type="text/javascript" src="/front-office/js/bootstrap.min.js"></script>

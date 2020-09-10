@@ -15,3 +15,9 @@ if (!function_exists('show_name_user')){
         return Auth::user()->name;
     }
 }
+
+if (!function_exists('client')){
+    function client(){
+        return Auth::user()->client;
+    }
+}

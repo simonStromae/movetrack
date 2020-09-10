@@ -6,13 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class City extends Model
 {
+    public $timestamps = false;
+
     protected $guarded = [];
 
     public function quaters(){
-        $this->hasMany('App\Quater');
+        return $this->hasMany('App\Quater');
     }
 
     public function country(){
-        $this->belongsTo('App\Country');
+        return $this->belongsTo('App\Country');
     }
 }

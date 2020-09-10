@@ -18,7 +18,7 @@
                     <div class="carousel-caption d-none d-md-block text-carousel">
                         <h2 style="font-size: 54px">Nous trouvons ce que vous désirez</h2>
                         <p>dites nous ce que vous désirez et notre équipe se charge de vous l'apportez en <strong>72 H</strong></p>
-                        <a href="#" class="mt-2 btn btn-primary rounded-0">Entrer votre besoin</a>
+                        <a href="{{ route('add-track') }}" class="mt-2 btn btn-primary rounded-0">Entrer votre besoin</a>
                     </div>
 
                     <!-- Mobile interface -->
@@ -32,13 +32,13 @@
                     <div class="carousel-caption d-none d-md-block text-carousel">
                         <h2 style="font-size: 54px">Expédition / Livraison où que vous soyez</h2>
                         <p>N'ayez aucune crainte, nous vous livrons où que vous soyez.</p>
-                        <a href="#" class="mt-2 btn btn-primary rounded-0">Entrer votre besoin</a>
+                        <a href="{{ route('add-track') }}" class="mt-2 btn btn-primary rounded-0">Entrer votre besoin</a>
                     </div>
 
                     <!-- Mobile interface -->
                     <div class="d-block d-sm-none carousel-caption">
                         <h2 class="h4">Expédition / Livraison où que vous soyez</h2>
-                        <a href="#" class="mt-2 btn btn-primary rounded-0">Entrer votre besoin</a>
+                        <a href="{{ route('add-track') }}" class="mt-2 btn btn-primary rounded-0">Entrer votre besoin</a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -46,13 +46,13 @@
                     <div class="carousel-caption d-none d-md-block text-carousel">
                         <h2 style="font-size: 54px">Votre satisfaction, notre priorité</h2>
                         <p>Notre équipe est à votre entière disposition pour vous offrir le meilleur service.</p>
-                        <a href="#" class="mt-2 btn btn-primary rounded-0">Entrer votre besoin</a>
+                        <a href="{{ route('add-track') }}" class="mt-2 btn btn-primary rounded-0">Entrer votre besoin</a>
                     </div>
 
                     <!-- Mobile interface -->
                     <div class="d-block d-sm-none carousel-caption">
                         <h2 class="h4">Votre satisfaction, notre priorité</h2>
-                        <a href="#" class="btn btn-primary rounded-0">Entrer votre besoin</a>
+                        <a href="{{ route('add-track') }}" class="btn btn-primary rounded-0">Entrer votre besoin</a>
                     </div>
                 </div>
             </div>

@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Quater extends Model
 {
+    public $timestamps = false;
+
     protected $guarded = [];
 
     public function city(){
-        $this->belongsTo('App\City');
+        return $this->belongsTo('App\City');
     }
 }
