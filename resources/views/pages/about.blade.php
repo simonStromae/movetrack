@@ -3,14 +3,11 @@
 @section('title', 'Expedition-Livraison')
 
 @section('front-content')
-    <div class="container-fluid p-5 text-center d-none d-md-block" style="background: url('/front-office/brand/background/bg_about.jpg');">
-        <h4 class="mb-3 text-capitalize text-white">Livraison / Expédition</h4>
-    </div>
-
-    <!-- background mobile -->
-    <div class="container-fluid p-5 text-center d-block d-sm-none" style="background: url('/front-office/brand/background/bg_about_mobile.jpg');">
-        <h4 class="mb-3 text-capitalize text-white">Livraison / Expédition</h4>
-    </div>
+    @include('layouts.partials.front-office.title-bar', [
+                "title" => 'Livraison / Expédition',
+                "image_path" => '/front-office/brand/background/bg_about.jpg',
+                "image_mb_path" => '/front-office/brand/background/bg_about_mobile.jpg'
+            ])
 
     <div class="container">
         <div class="row p-4 mt-5 text-justify">

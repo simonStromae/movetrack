@@ -1,6 +1,6 @@
 @extends('layouts.front-app', ['welcome' => 'active'])
 
-@section('title', 'Expedition-Livraison')
+@section('title', 'Bienvenue')
 
 @section('front-content')
     <!-- Sliders -->
@@ -16,43 +16,43 @@
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="/front-office/brand/slider/slide-2.jpg" alt="First slide">
                     <div class="carousel-caption d-none d-md-block text-carousel">
-                        <h2>Nous trouvons ce que vous désirez</h2>
+                        <h2 style="font-size: 54px">Nous trouvons ce que vous désirez</h2>
                         <p>dites nous ce que vous désirez et notre équipe se charge de vous l'apportez en <strong>72 H</strong></p>
-                        <a href="tracking.html" class="btn btn-primary rounded-0">Entrer votre besoin</a>
+                        <a href="#" class="mt-2 btn btn-primary rounded-0">Entrer votre besoin</a>
                     </div>
 
                     <!-- Mobile interface -->
                     <div class="d-block d-sm-none carousel-caption">
                         <h2 class="h4">Nous trouvons ce que vous désirez</h2>
-                        <a href="tracking.html" class="btn btn-primary rounded-0">Entrer votre besoin</a>
+                        <a href="#" class="mt-2 btn btn-primary rounded-0">Entrer votre besoin</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="/front-office/brand/slider/slide-3.jpg" alt="Second slide">
                     <div class="carousel-caption d-none d-md-block text-carousel">
-                        <h2>Expédition / Livraison où que vous soyez</h2>
+                        <h2 style="font-size: 54px">Expédition / Livraison où que vous soyez</h2>
                         <p>N'ayez aucune crainte, nous vous livrons où que vous soyez.</p>
-                        <a href="tracking.html" class="btn btn-primary rounded-0">Entrer votre besoin</a>
+                        <a href="#" class="mt-2 btn btn-primary rounded-0">Entrer votre besoin</a>
                     </div>
 
                     <!-- Mobile interface -->
                     <div class="d-block d-sm-none carousel-caption">
                         <h2 class="h4">Expédition / Livraison où que vous soyez</h2>
-                        <a href="tracking.html" class="btn btn-primary rounded-0">Entrer votre besoin</a>
+                        <a href="#" class="mt-2 btn btn-primary rounded-0">Entrer votre besoin</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="/front-office/brand/slider/slide-1.jpg" alt="Third slide">
                     <div class="carousel-caption d-none d-md-block text-carousel">
-                        <h2>Votre satisfaction, notre priorité</h2>
+                        <h2 style="font-size: 54px">Votre satisfaction, notre priorité</h2>
                         <p>Notre équipe est à votre entière disposition pour vous offrir le meilleur service.</p>
-                        <a href="tracking.html" class="btn btn-primary rounded-0">Entrer votre besoin</a>
+                        <a href="#" class="mt-2 btn btn-primary rounded-0">Entrer votre besoin</a>
                     </div>
 
                     <!-- Mobile interface -->
                     <div class="d-block d-sm-none carousel-caption">
                         <h2 class="h4">Votre satisfaction, notre priorité</h2>
-                        <a href="tracking.html" class="btn btn-primary rounded-0">Entrer votre besoin</a>
+                        <a href="#" class="btn btn-primary rounded-0">Entrer votre besoin</a>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
     <!-- Comment ça marche -->
     <div class="bg">
         <div class="p-5 container">
-            <h1 class="text-center text-dark">Comment ça marche ?</h1>
+            <h1 class="text-center text-dark h1">Comment ça marche ?</h1>
             <div class="row mt-5">
                 <div class="col-md-7 col-sm-12">
                     <img src="/front-office/brand/track.svg"class="float-left m-4" width="200px">

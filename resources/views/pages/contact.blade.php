@@ -3,14 +3,11 @@
 @section('title', 'Contact')
 
 @section('front-content')
-    <div class="container-fluid p-5 text-center d-none d-md-block" style="background: url('/front-office/brand/background/bg_contact.jpg');">
-        <h4 class="mb-3 text-capitalize text-white">Contact</h4>
-    </div>
-
-    <!-- background mobile -->
-    <div class="container-fluid p-5 text-center d-block d-sm-none" style="background: url('/front-office/brand/background/bg_contact_mobile.jpg');">
-        <h4 class="mb-3 text-capitalize text-white">Contact</h4>
-    </div>
+    @include('layouts.partials.front-office.title-bar', [
+                "title" => 'Contact',
+                "image_path" => '/front-office/brand/background/bg_contact.jpg',
+                "image_mb_path" => '/front-office/brand/background/bg_contact_mobile.jpg'
+            ])
 
     <div class="container">
         <div class="row p-4 mt-5">
@@ -18,15 +15,15 @@
                 <h6 class="text-uppercase text-dark" style="font-family:nexa-regular">Information Contact</h6><hr style="border: 1px solid; margin-top: 0px">
 
                 <div class="info">
-                    <p>
+                    <p class="p-4">
                         <strong>Localisation :</strong>
                         <small>123 rue Cité des Palmiers, Douala - Cameroun</small>
                     </p><hr>
-                    <p>
+                    <p class="p-4">
                         <strong>Téléphone :</strong>
                         <small>+237 6 99 76 84 94 / 6 98 18 80 84</small>
                     </p><hr>
-                    <p>
+                    <p class="p-4">
                         <strong>Adresse Email :</strong>
                         <small>moveglobalcameroun@gmail.com</small>
                     </p><hr>

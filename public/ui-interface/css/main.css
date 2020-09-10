@@ -1,3 +1,4 @@
+
 /* *********************************************
 [Master Stylesheet]
 
@@ -18,8 +19,6 @@ Last Update: Sept 03, 2020
   $border: #ebebeb; [Border Color]
   $hover: #f55656; [Hover Color]
   $secondary: #a6a6a6; [Secondary Color]
-
-.shadow{box-shadow:0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important}
   ---------------------------------------------
   [Font Family: 'Nexa']
 --------------------------------------------- */
@@ -54,11 +53,11 @@ Last Update: Sept 03, 2020
 
 html, body {
   height: 100%;
-  font-family: nexa;
+    font-family: nexa, sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6{
-  font-family: nexa-heavy;
+  font-family: nexa-heavy, sans-serif;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
@@ -115,7 +114,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .nav-item .nav-link{
-  font-family: nexa-regular
+  font-family: nexa-regular, sans-serif;
 }
 
 

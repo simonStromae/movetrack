@@ -20,13 +20,30 @@
                     <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                 </li>
                 <li class="nav-item {{ $faq ?? '' }}">
-                    <a class="nav-link" href="faq.html">FAQ</a>
+                    <a class="nav-link" href="#">FAQ</a>
                 </li>
             </ul>
         </div>
-        <form class="row form-inline align-item-center d-flex justify-content-center">
-            <a href="login.html" class="shadow-sm rounded-0 btn btn-outline-primary btn-md mb-2 text-sm">Se connecter</a>
-            <a href="tracking.html" class="shadow-sm rounded-0 btn btn-md btn-danger mx-2 mb-2 text-sm">Entrer votre besoin</a>
-        </form>
+        <div class="row form-inline align-item-center d-flex justify-content-center">
+            @guest
+                <a href="{{ route('login') }}" class="shadow-sm rounded-0 btn btn-outline-primary btn-md mb-2 text-sm">Se connecter</a>
+            @else
+                <div class="dropdown">
+                    <a href="#" class="text-primary-2 account m-3 text-sm font-weight-bold" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ show_name_user() }} <i class="fa fa-angle-down"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="{{ route('my-account') }}">Mon compte</a>
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Deconnexion</a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </div>
+            @endguest
+                <a href="#" class="shadow-sm rounded-0 btn btn-md btn-danger mx-2 mb-2 text-sm">Entrer votre besoin</a>
+        </div>
     </div>
 </nav>

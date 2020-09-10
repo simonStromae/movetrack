@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,5 +31,6 @@ Route::fallback(function (){
 Route::view('error_503', 'errors.503')->name('error-503');
 
 Auth::routes();
+Route::get('/my-account', 'Stromae\ProfileController@account')->name('my-account');
 
 Route::get('/home', 'HomeController@index')->name('home');
