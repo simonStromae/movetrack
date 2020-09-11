@@ -47,8 +47,8 @@
                             </div>
 
                             <div class="form-group m-t-5">
-                                <input type="text" id="email" name="username" class="@error('username') is-invalid @enderror text-xs form-control rounded-0 bg-transparent" placeholder="Adresse E-mail" value="{{ old('username') }}" autocomplete="email">
-                                @error('username')
+                                <input type="text" id="email" name="email" class="@error('email') is-invalid @enderror text-xs form-control rounded-0 bg-transparent" placeholder="Adresse E-mail" value="{{ old('username') }}" autocomplete="email">
+                                @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

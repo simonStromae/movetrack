@@ -38,8 +38,8 @@
                             @csrf
 
                             <div class="form-group">
-                                <input type="text" name="username" class="@error('username') is-invalid @enderror text-xs form-control rounded-0 bg-transparent" placeholder="Adresse E-mail" value="{{ old('email') }}" autofocus>
-                                @error('username')
+                                <input type="text" name="email" class="@error('email') is-invalid @enderror text-xs form-control rounded-0 bg-transparent" placeholder="Adresse E-mail" value="{{ old('email') }}" autofocus>
+                                @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

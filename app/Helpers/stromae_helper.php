@@ -6,7 +6,7 @@ if(!function_exists('show_avatar')){
     function show_avatar():string{
         $avatar = Auth::user()->avatar;
 
-        return !empty ($avatar) ? $avatar : "/front-office/brand/avatars/default.jpg";
+        return !empty ($avatar) ? asset('storage').'/images/avatars/'.$avatar : "/front-office/brand/avatars/default.jpg";
     }
 }
 
@@ -19,5 +19,29 @@ if (!function_exists('show_name_user')){
 if (!function_exists('client')){
     function client(){
         return Auth::user()->client;
+    }
+}
+
+if (!function_exists('client_tracks')){
+    function client_tracks(){
+        return client()->tracks->where('status', 'success');
+    }
+}
+
+if(!function_exists('last_track_emit')){
+    function last_track_emit(){
+        return client()->tracks->where('status', 'emit')->last();
+    }
+}
+
+if(!function_exists('check')){
+    function check(){
+        return Auth::check();
+    }
+}
+
+if(!function_exists('user')){
+    function user(){
+        return check() ? Auth::user() : false;
     }
 }

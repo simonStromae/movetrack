@@ -5,9 +5,12 @@ namespace App\Http\Livewire\Stromae;
 use App\Category;
 use App\Track;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class AddTrack extends Component
 {
+    use WithFileUploads;
+
     public $id_track;
     public $designation;
     public $marque;

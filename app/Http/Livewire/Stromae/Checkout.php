@@ -26,8 +26,8 @@ class Checkout extends Component
         $this->track_id = $id_track;
         $this->countries = Country::all();
 
-        if ($this->check()){
-            $user = $this->user();
+        if (check()){
+            $user = user();
             $this->name = $user->name;
             $this->email = $user->client->email;
             $this->tel = $user->client->phone_number;
@@ -65,8 +65,8 @@ class Checkout extends Component
         ]);
 
         //recuperation information client
-        if($this->check()){
-            $user = $this->user();
+        if(check()){
+            $user = user();
             $user->name = $this->name;
             $user->save();
 
@@ -80,7 +80,7 @@ class Checkout extends Component
 
             $user = User::create([
                 "name" => $this->name,
-                "username" => $this->email,
+                "email" => $this->email,
                 "password" => Hash::make('12345678'),
                 "client_id" => $client->id
             ]);
@@ -95,14 +95,6 @@ class Checkout extends Component
         smilify('success', 'Information de livraison enregistrer');
 
         return redirect()->route('recap', $this->track_id);
-    }
-
-    private function check(){
-        return Auth::check();
-    }
-
-    private function user(){
-        return $this->check() ? Auth::user() : false;
     }
 
     private function addValuesClient($client){

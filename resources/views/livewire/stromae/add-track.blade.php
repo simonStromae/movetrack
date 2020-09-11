@@ -62,8 +62,9 @@
 
     <div class="form-group">
         <label for="image" class="title-label">Image <small>(facultatif)</small></label>
-        <input type="file" multiple wire:model.lazy="image[]" id="image" class="form-control-file">
+        <input type="file" multiple wire:model.lazy="image[]" id="image" class="@error('image') is-invalid @enderror form-control-file">
         <small id="emailHelp" class="text-xs form-text text-muted">Vous pouvez insérer une ou plusieurs images.</small>
+        @error('image') <div class="invalid-feedback">{{ $message }}</div> @enderror
     </div>
 
     <div class="form-group">

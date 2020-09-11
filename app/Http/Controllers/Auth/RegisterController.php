@@ -52,7 +52,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8'],
         ]);
     }
@@ -66,12 +66,12 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $client = new Client();
-        $client->email = $data['username'];
+        $client->email = $data['email'];
         $client->save();
 
         return User::create([
             'name' => $data['name'],
-            'username' => $data['username'],
+            'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'client_id' => $client->id
         ]);

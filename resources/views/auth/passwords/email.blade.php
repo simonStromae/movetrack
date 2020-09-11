@@ -34,7 +34,7 @@
                             @csrf
 
                             <div class="form-group">
-                                <input type="text" id="email" class="@error('email') is-invalid @enderror text-xs form-control rounded-0 bg-transparent" placeholder="Adresse E-mail" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input name="email" type="text" id="email" class="@error('email') is-invalid @enderror text-xs form-control rounded-0 bg-transparent" placeholder="Adresse E-mail" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

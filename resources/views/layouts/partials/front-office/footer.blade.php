@@ -7,10 +7,10 @@
                 <a href="#" class="text-uppercase text-dark font-weight-bold">FAQ</a>
             </p>
             <p class="col-md-6 col-sm-6 icons mt-3 text-center">
-                <img src="/front-office/css/fontawesome-free/svgs/brands/facebook-square.svg" width="15">
-                <img src="/front-office/css/fontawesome-free/svgs/brands/twitter.svg" width="15">
-                <img src="/front-office/css/fontawesome-free/svgs/brands/instagram.svg" width="15">
-                <img src="/front-office/css/fontawesome-free/svgs/brands/linkedin.svg" width="15">
+                <i class="fa-2x fa fa-facebook-square"></i>
+                <i class="fa-2x fa fa-twitter"></i>
+                <i class="fa-2x fa fa-instagram"></i>
+                <i class="fa-2x fa fa-linkedin"></i>
             </p>
         </div>
         <center>&copy; Copyright 2020. Designed By <b>Simon Stromae</b></center>

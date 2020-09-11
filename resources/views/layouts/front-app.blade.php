@@ -11,7 +11,7 @@
     <link href="/front-office/css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template-->
-    <link href="/front-office/css/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="/front-office/css/font-awesome/css/font-awesome.css" rel="stylesheet">
 
     <!-- Main core css -->
     <link href="/front-office/css/main.css" rel="stylesheet">

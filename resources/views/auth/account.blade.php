@@ -32,175 +32,14 @@
                 <!-- Profile -->
                 <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                     <div class="card shadow-sm rounded-0 bg-light">
-                        <div class="card-body">
-                            <!--<h5 class="mb-3">Profil</h5>-->
-
-                            <!--Personal Information -->
-                            <div class="mt-5">
-                                <h6 class="">Avatar</h6><hr>
-
-                                <div class="row">
-                                    <p class="col-md-4 col-sm-12" style="font-size: 12px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <div class="col-md-8 col-sm-12">
-                                        <div class="mb-2">
-                                            <img class="rounded-circle" src="{{ show_avatar() }}" width="125">
-                                        </div>
-                                        <form>
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-9 form-group">
-                                                    <input class="form-control-file rounded-0" type="file">
-                                                </div>
-                                                <div class="col-sm-12 col-md-3 form-group">
-                                                    <button class="btn btn-dark rounded-0">Modifier</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <!--Personal Information -->
-                            <div class="mt-5">
-                                <h6 class="">Information Personnelle</h6><hr>
-
-                                <div class="row">
-                                    <p class="col-md-4 col-sm-12" style="font-size: 12px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <div class="col-md-8 col-sm-12">
-                                        <form>
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-8 form-group">
-                                                    <label for="first_name" class="title-label">Nom</label>
-                                                    <input class="form-control rounded-0" type="text" id="first_name" value="">
-                                                </div>
-
-                                                <div class="col-sm-12 col-md-4 form-group">
-                                                    <label for="tel" class="title-label">Numéro téléphone</label>
-                                                    <input class="form-control rounded-0" type="tel" id="tel" aria-describedby="emailHelp" value="691274385">
-                                                    <small id="emailHelp" class="text-xs form-text text-muted">Conserver le format a 9 chiffres sans espace, ni tirets.</small>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="birthday" class="title-label">Date d'anniversaire</label>
-                                                <input class="form-control rounded-0" type="date" id="birthday">
-                                            </div>
-
-                                            <div class="form-group">
-                                                <button class="btn btn-dark rounded-0">Sauvegarder</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--E-mail Address -->
-                            <div class="mt-5">
-                                <h6 class="">Adresse Email</h6><hr>
-
-                                <div class="row">
-                                    <p class="col-md-4 col-sm-12" style="font-size: 12px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <div class="col-md-8 col-sm-12">
-                                        <form>
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-6 form-group">
-                                                    <label for="tel" class="title-label">Email</label>
-                                                    <input class="form-control rounded-0" type="tel" id="tel" value="email@example.com">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <button class="btn btn-dark rounded-0">Enregistrer</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @livewire('stromae.account.profile')
                     </div>
                 </div>
 
                 <!-- Delivery Address -->
                 <div class="tab-pane fade" id="pills-delivery" role="tabpanel" aria-labelledby="pills-delivery-tab">
                     <div class="card shadow-sm rounded-0 bg-light">
-                        <div class="card-body">
-
-                            <!--Personal Information -->
-                            <div class="mt-5">
-                                <h6 class="">Localisation</h6><hr>
-
-                                <div class="row">
-                                    <p class="col-md-4 col-sm-12" style="font-size: 12px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <div class="col-md-8 col-sm-12">
-                                        <form>
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-6 form-group">
-                                                    <label for="city" class="title-label">Ville</label>
-                                                    <select class="form-control rounded-0" id="city">
-                                                        <option>selectionnez une ville...</option>
-                                                        <option>Douala</option>
-                                                        <option>Yaoundé</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-sm-12 col-md-6 form-group">
-                                                    <label for="quater" class="title-label">Quartier</label>
-                                                    <select class="form-control rounded-0" id="quater">
-                                                        <option>selectionnez un quartier...</option>
-                                                        <option>Bonamoussadi</option>
-                                                        <option>Bepanda</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-6 form-group">
-                                                    <label for="birthday" class="title-label">Secteur</label>
-                                                    <input class="form-control rounded-0" type="text" id="second_name" value="2ème entrée">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <button class="btn btn-dark rounded-0">Enregistrer</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--E-mail Address -->
-                            <div class="mt-5">
-                                <h6 class="">Repère</h6><hr>
-
-                                <div class="row">
-                                    <p class="col-md-4 col-sm-12" style="font-size: 12px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <div class="col-md-8 col-sm-12">
-                                        <form>
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-6 form-group">
-                                                    <label for="landmark" class="title-label">Repère</label>
-                                                    <input class="form-control rounded-0" type="tel" id="landmark">
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-8 form-group">
-                                                    <label for="particular_landmark" class="title-label">Repère particulier</label>
-                                                    <input class="form-control rounded-0" type="particular_landmark" id="tel">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <button class="btn btn-dark rounded-0">Enregistrer</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @livewire('stromae.account.localisation')
                     </div>
                 </div>
 
@@ -222,28 +61,23 @@
                                             <tbody class="table-borderless">
                                             <tr>
                                                 <td>Produit</td>
-                                                <td class="font-weight-bold">Iphone 6s</td>
+                                                <td class="font-weight-bold">{{ last_track_emit()->designation }}</td>
                                             </tr>
                                             <tr>
                                                 <td>Marque</td>
-                                                <td class="font-weight-bold">Apple</td>
+                                                <td class="font-weight-bold">{{ last_track_emit()->brand }}</td>
                                             </tr>
                                             <tr>
                                                 <td>Catégorie</td>
-                                                <td class="font-weight-bold">Smartphone</td>
+                                                <td class="font-weight-bold">{{ last_track_emit()->category->name }}</td>
                                             </tr>
                                             <tr>
                                                 <td>Budget</td>
-                                                <td class="font-weight-bold">100.000 Fcfa</td>
+                                                <td class="font-weight-bold">{{ number_format(last_track_emit()->budget, 0, '.', ' ') }} Fcfa</td>
                                             </tr>
                                             <tr>
                                                 <td>Description</td>
-                                                <td class="font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+                                                <td class="font-weight-bold">{{ last_track_emit()->description }}</td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -266,7 +100,7 @@
                             <div class="mt-5">
                                 <h6 class="">Historique</h6><hr>
 
-                                <table class="w-100 table table-responsive">
+                                <table class="w-100 table table-borderless">
                                     <thead class="thead-dark">
                                     <tr>
                                         <th scope="col">#</th>
@@ -278,46 +112,22 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td class="font-weight-bold">Iphone 6s</td>
-                                        <td class="font-weight-bold">Apple</td>
-                                        <td class="font-weight-bold">Smartphone</td>
-                                        <td class="font-weight-bold">100.000 Fcfa</td>
-                                        <td class="font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td class="font-weight-bold">Iphone 6s</td>
-                                        <td class="font-weight-bold">Apple</td>
-                                        <td class="font-weight-bold">Smartphone</td>
-                                        <td class="font-weight-bold">100.000 Fcfa</td>
-                                        <td class="font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td class="font-weight-bold">Iphone 6s</td>
-                                        <td class="font-weight-bold">Apple</td>
-                                        <td class="font-weight-bold">Smartphone</td>
-                                        <td class="font-weight-bold">100.000 Fcfa</td>
-                                        <td class="font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td class="font-weight-bold">Iphone 6s</td>
-                                        <td class="font-weight-bold">Apple</td>
-                                        <td class="font-weight-bold">Smartphone</td>
-                                        <td class="font-weight-bold">100.000 Fcfa</td>
-                                        <td class="font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td class="font-weight-bold">Iphone 6s</td>
-                                        <td class="font-weight-bold">Apple</td>
-                                        <td class="font-weight-bold">Smartphone</td>
-                                        <td class="font-weight-bold">100.000 Fcfa</td>
-                                        <td class="font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                                    </tr>
+                                        @forelse(client_tracks() as $track)
+                                            <tr>
+                                                <td></td>
+                                                <td class="font-weight-bold">{{ $track->designation }}</td>
+                                                <td class="font-weight-bold">{{ $track->brand }}</td>
+                                                <td class="font-weight-bold">{{ $track->category->name }}</td>
+                                                <td class="font-weight-bold">{{ number_format($track->budget, 0, '.', ' ') }} Fcfa</td>
+                                                <td class="font-weight-bold">{{ $track->description }}</td>
+                                            </tr>
+                                        @empty
+                                            <tr>
+                                                <td colspan="6" class="text-center">Vous ne disposez d'aucun track ! soumettre un besoin
+                                                    <a class="font-weight-bold text-danger" href="{{ route('add-track') }}">Ici</a>
+                                                </td>
+                                            </tr>
+                                        @endforelse
                                     </tbody>
                                 </table>
                             </div>
