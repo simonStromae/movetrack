@@ -35,6 +35,8 @@ Route::namespace('Nkd\Backend')->prefix('admin-track')->group(function(){
             Route::livewire('/Tracks/Ajouter/{id_client}','nkd.track.create-track')->name('backend.track.create');
             Route::livewire('/Tracks/Modifier/{id}','nkd.track.edit-track')->name('backend.track.edit');
 
+            Route::livewire('/Tracks/{id}','nkd.track.show-track')->name('backend.track.show');
+
             Route::livewire('/Client/Tous-les-clients','nkd.client.client-list')->name('backend.client.list');
             Route::livewire('/Client/Ajouter','nkd.client.create-client')->name('backend.client.create');
             Route::livewire('/Client/Modifier/{id}','nkd.client.edit-client')->name('backend.client.edit');
@@ -43,6 +45,18 @@ Route::namespace('Nkd\Backend')->prefix('admin-track')->group(function(){
             Route::livewire('/Categories/Tous-les-categories','nkd.category.list-category')->name('backend.category.list');
             Route::livewire('/Categories/Ajouter','nkd.category.create-category')->name('backend.category.create');
             Route::livewire('/Categories/Modifier/{id}','nkd.category.edit-category')->name('backend.category.edit');
+
+            Route::livewire('/Pays/Tous-les-Pays','nkd.country.list-country')->name('backend.country.list');
+            Route::livewire('/Pays/Ajouter','nkd.country.create-country')->name('backend.country.create');
+            Route::livewire('/Pays/Modifier/{id}','nkd.country.edit-country')->name('backend.country.edit');
+
+            Route::livewire('/Villes/Tous-les-villes','nkd.city.list-city')->name('backend.city.list');
+            Route::livewire('/Villes/Ajouter','nkd.city.create-city')->name('backend.city.create');
+            Route::livewire('/Villes/Modifier/{id}','nkd.city.edit-city')->name('backend.city.edit');
+
+            Route::livewire('/Quartier/Tous-les-quartier','nkd.quater.list-quater')->name('backend.quater.list');
+            Route::livewire('/Quartier/Ajouter','nkd.quater.create-quater')->name('backend.quater.create');
+            Route::livewire('/Quartier/Modifier/{id}','nkd.quater.edit-quater')->name('backend.quater.edit');
 
         });
     });

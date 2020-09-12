@@ -108,16 +108,28 @@
 {{--                        <div class="dropdown-divider"></div>--}}
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                {{--                                <i class="far fa-circle nav-icon"></i>--}}
                                 <p>Parametres de track</p>
                             </a>
                         </li>
+
+                        <div class="dropdown-divider"></div>
+
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                {{--                                <i class="far fa-circle nav-icon"></i>--}}
-                                <p>Parametres de Localisations </p>
+                            <a href="{{route('backend.country.list')}}" class="nav-link">
+                                <p>Pays</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('backend.country.list')}}" class="nav-link">
+                                <p>Ville</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('backend.country.list')}}" class="nav-link">
+                                <p>Quartier</p>
+                            </a>
+                        </li>
+
                     </ul>
 
                 </li>

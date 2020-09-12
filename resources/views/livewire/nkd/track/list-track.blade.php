@@ -65,11 +65,15 @@
                                 <tbody>
 
                                 @forelse($tracks as $t)
-                                    <tr>
+                                    <tr >
                                         <td><strong>{{$t->reference}}</strong></td>
+                                        <td class=" ">
+                                            <a href="#" style="text-decoration: none">{{$t->designation}}</a></td>
+                                        <td>
+                                            @livewire('nkd.track.status-change',['id_track' => $t->id], key($t->id))
+                                        </td>
                                         <td><img src="{{$t->image ?? '/back-office/dist/img/avatar4.png'}}" width="45" class=" rounded"></td>
-                                        <td>{{$t->status}}</td>
-                                        <td> <a href="#" style="text-decoration: none">{{$t->designation}}</a></td>
+
                                         <td>{{$t->description}}</td>
 
                                         <td>{{$t->category->name}} </td>
