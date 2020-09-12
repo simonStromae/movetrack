@@ -7,12 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 class Track extends Model
 {
     protected $guarded = [];
+    public $timestamps =false;
+
 
     public function category(){
-        $this->belongsTo('App\Category');
+        return $this->belongsTo('App\Category');
     }
 
+    public function client(){
+        return $this->belongsTo('App\Client');
+    }
     public function images(){
-        $this->hasMany('App\Image');
+        return $this->hasMany('App\Image');
+    }
+
+    public function getBudgetAttribute($value){
+        return "$value FCFA ";
     }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,10 +59,12 @@
     <script src="/back-office/plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
-        $.widget.bridge('uibutton', $.ui.button)
+        $.widget.bridge('uibutton', $.ui.button);
+        // $.wiget.bridge('uibutton', $.ui.button());
     </script>
     <!-- Bootstrap 4 -->
     <script src="/back-office/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
     @stack('js')
     <!-- AdminLTE App -->
     <script src="/back-office/dist/js/adminlte.js"></script>

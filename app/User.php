@@ -38,10 +38,14 @@ class User extends Authenticatable
     ];
 
     public function role(){
-        $this->belongsTo('App\Role');
+        return $this->belongsTo('App\Role');
     }
 
     public function client(){
-        $this->hasOne('App\Client');
+        return $this->hasOne('App\Client', 'client_id');
+    }
+
+    public function hasRole($role){
+        return null !== $this->role()->where('name', $role)->first();
     }
 }

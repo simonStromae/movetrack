@@ -11,14 +11,14 @@ class Client extends Model
     protected $guarded = [];
 
     public function quater(){
-        $this->belongsTo('App\Quater');
+        return $this->belongsTo('App\Quater');
     }
 
     public function user(){
-        $this->belongsTo('App\User');
+        return $this->belongsTo('App\User');
     }
 
     public function tracks(){
-        $this->hasMany('App\Track');
+        return $this->hasMany('App\Track');
     }
 }
