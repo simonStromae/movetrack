@@ -106,11 +106,11 @@
                             </a>
                         </li>
 {{--                        <div class="dropdown-divider"></div>--}}
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <p>Parametres de track</p>
-                            </a>
-                        </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a href="#" class="nav-link">--}}
+{{--                                <p>Parametres de track</p>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
 
                         <div class="dropdown-divider"></div>
 
@@ -120,12 +120,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('backend.country.list')}}" class="nav-link">
+                            <a href="{{route('backend.city.list')}}" class="nav-link">
                                 <p>Ville</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('backend.country.list')}}" class="nav-link">
+                            <a href="{{route('backend.quater.list')}}" class="nav-link">
                                 <p>Quartier</p>
                             </a>
                         </li>

@@ -30,6 +30,10 @@ Route::namespace('Nkd\Backend')->prefix('admin-track')->group(function(){
         Route::delete('/Track/{id}','TrackController@destroy')->name('backend.track.destroy');
         Route::delete('/Categorie/{id}','CategoryController@destroy')->name('backend.category.destroy');
 
+        Route::delete('/Ville/{id}','LocationController@destroyCity')->name('backend.country.destroy');
+        Route::delete('/Quatier/{id}','LocationController@destroyQuater')->name('backend.quater.destroy');
+        Route::delete('/ville/{id}','LocationController@destroyCity')->name('backend.city.destroy');
+
         Route::layout('layouts.back-app')->group(function(){
             Route::livewire('/Tracks/','nkd.track.list-track')->name('backend.track.list');
             Route::livewire('/Tracks/Ajouter/{id_client}','nkd.track.create-track')->name('backend.track.create');

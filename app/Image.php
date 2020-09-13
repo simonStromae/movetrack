@@ -9,6 +9,6 @@ class Image extends Model
     protected $guarded = [];
 
     public function track(){
-        $this->belongsTo('App\Track');
+        return $this->belongsTo('App\Track');
     }
 }
