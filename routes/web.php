@@ -38,13 +38,12 @@ Route::namespace('Nkd\Backend')->prefix('admin-track')->group(function(){
             Route::livewire('/Tracks/','nkd.track.list-track')->name('backend.track.list');
             Route::livewire('/Tracks/Ajouter/{id_client}','nkd.track.create-track')->name('backend.track.create');
             Route::livewire('/Tracks/Modifier/{id}','nkd.track.edit-track')->name('backend.track.edit');
-
             Route::livewire('/Tracks/{id}','nkd.track.show-track')->name('backend.track.show');
 
             Route::livewire('/Client/Tous-les-clients','nkd.client.client-list')->name('backend.client.list');
             Route::livewire('/Client/Ajouter','nkd.client.create-client')->name('backend.client.create');
             Route::livewire('/Client/Modifier/{id}','nkd.client.edit-client')->name('backend.client.edit');
-            Route::livewire('/Client/{id}','nkd.client.show-client')->name('backend.show.edit');
+            Route::livewire('/Client/{id}','nkd.client.show-client')->name('backend.client.show');
 
             Route::livewire('/Categories/Tous-les-categories','nkd.category.list-category')->name('backend.category.list');
             Route::livewire('/Categories/Ajouter','nkd.category.create-category')->name('backend.category.create');

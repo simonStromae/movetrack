@@ -68,7 +68,7 @@
                             @forelse($clients as $c)
                                 <tr>
                                     <td><img src="{{getUser($c)->avatar ?? '/back-office/dist/img/avatar4.png'}}" width="45" class=" img-circle" alt="{{getUser($c)->name ?? 'Pas de nom'}}"></td>
-                                    <td> <a href="{{route('backend.show.edit', $c->id)}}" style="text-decoration: none">{{ getUser($c)->name ?? 'Pas de nom'}}</a></td>
+                                    <td> <a href="{{route('backend.client.show', $c->id)}}" style="text-decoration: none">{{ getUser($c)->name ?? 'Pas de nom'}}</a></td>
                                     <td>{{$c->email}}</td>
                                     <td>{{$c->phone_number}} </td>
 

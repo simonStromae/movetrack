@@ -14,7 +14,8 @@ class StatusChange extends Component
     public function mount($id_track){
 
         $this->track = Track::find($id_track);
-        $this->track_id=$id_track;
+        $this->track_id = $id_track;
+        $this->statusmodel = $this->track->status;
     }
 
     public function updatedStatusmodel(){

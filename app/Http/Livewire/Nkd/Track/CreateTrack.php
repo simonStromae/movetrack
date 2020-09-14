@@ -38,6 +38,7 @@ class CreateTrack extends Component
         $t->designation = $this->designation;
         $t->created_date = date('Y-m-d h:i:s');
         $t->brand = $this->brand;
+        $t->status = 'emit';
         $t->budget = $this->budget;
         $t->description = $this->description;
         $t->category_id = $this->category_id;
