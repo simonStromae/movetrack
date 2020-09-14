@@ -70,6 +70,13 @@ Route::namespace('Nkd\Backend')->prefix('admin-track')->group(function(){
 /**
  * End Routes NKD
  */
+
+/*
+|--------------------------------------------------------------------------
+| START STROMAE ROUTES
+|--------------------------------------------------------------------------
+*/
+
 //Welcome-page
 Route::view('/', 'welcome')->name('welcome');
 
