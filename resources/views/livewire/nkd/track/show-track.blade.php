@@ -57,8 +57,8 @@
 
                             <div class="">
                                 <p  class="">Marque : <strong> {{ $track->brand}}</strong> </p>
-                                <p class="">Marque : <strong> {{ $track->budget}}</strong> </p>
-                                <p class="">Categorie : <strong> {{ $track->category->name}}</strong> </p>
+                                <p class="">Prix : <strong> {{ $track->budget}}</strong> </p>
+                                <p class="">Catégorie : <strong> {{ $track->category->name}}</strong> </p>
                             </div>
                         </div>
                         <div class="">

@@ -18,6 +18,10 @@ class Track extends Model
         return $this->hasMany('App\Image');
     }
 
+    public function client(){
+        return $this->belongsTo('App\Client');
+    }
+
     public function getBudgetAttribute($value){
         return "$value FCFA ";
     }

@@ -28,7 +28,7 @@
 
             <div class="card-header">
                 <h3 class="card-title font-weight-bold">Liste des Quartiers</h3>
-                <a href="{{ route('backend.quater.create') }}" class="float-right btn btn-primary btn-sm ml-1"><i class="fas fa-plus-circle mr-1"></i>Ajouter une ville</a>
+                <a href="{{ route('backend.quater.create') }}" class="float-right btn btn-primary btn-sm ml-1"><i class="fas fa-plus-circle mr-1"></i>Ajouter un quartier</a>
             </div>
             <!-- /.card-header -->
 
@@ -56,7 +56,7 @@
                                     <span class="text-secondary">{{$q->slug}}</span>
                                 </td>
                                 <td>
-                                    <a class="btn btn-outline-primary btn-xs" href="{{route('backend.city.edit',$q->id)}}"><i class="fas fa-user-edit"></i></a>
+                                    <a class="btn btn-outline-primary btn-xs" href="{{route('backend.quater.edit',$q->id)}}"><i class="fas fa-user-edit"></i></a>
                                     <a class="btn btn-outline-danger btn-xs"  href="" data-toggle="modal" data-target="#modal-{{ $q->id }}"><i class="fas fa-trash"></i></a>
 
                                     @include('layouts.partials.delete_modal',

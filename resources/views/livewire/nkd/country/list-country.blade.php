@@ -57,13 +57,14 @@
                                 </td>
                                 <td>
                                     <a class="btn btn-outline-primary btn-xs" href="{{route('backend.country.edit',$c->id)}}"><i class="fas fa-user-edit"></i></a>
+
                                     <a class="btn btn-outline-danger btn-xs"  href="" data-toggle="modal" data-target="#modal-{{ $c->id }}"><i class="fas fa-trash"></i></a>
 
                                     @include('layouts.partials.delete_modal',
                                        [
                                            'id'=> $c->id,
                                            'name'=> 'Pays',
-                                           "route"=> route('backend.track.destroy', $c->id),
+                                           "route"=> route('backend.country.destroy', $c->id),
                                            "sms"=> "Vouler-vous supprimer définitivement le Pays : $c->name?"
                                        ])
                                 </td>

@@ -15,7 +15,9 @@ class ShowTrack extends Component
 
     public function mount($id){
 
-        $this->track = Track::find($id);
+        try_find_ressource(function() use ($id){
+            $this->track = Track::findOrFail($id);
+        });
 
         $this->delivery_date = $this->track->delivery_date;
         $this->delivery_price = $this->track->delivery_price;
