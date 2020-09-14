@@ -33,7 +33,11 @@
                         {{ show_name_user() }} <i class="fa fa-angle-down"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="{{ route('my-account') }}">Mon compte</a>
+                        @if(user()->hasRole('admin'))
+                            <a class="dropdown-item" href="{{ route('backend.dashboard') }}">Tableau de bord</a>
+                        @else
+                            <a class="dropdown-item" href="{{ route('my-account') }}">Mon compte</a>
+                        @endif
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">Deconnexion</a>
 
