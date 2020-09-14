@@ -42,6 +42,10 @@ class User extends Authenticatable
     }
 
     public function client(){
-        return $this->belongsTo('App\Client');
+        return $this->hasOne('App\Client', 'client_id');
+    }
+
+    public function hasRole($role){
+        return null !== $this->role()->where('name', $role)->first();
     }
 }

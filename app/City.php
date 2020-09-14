@@ -9,6 +9,7 @@ class City extends Model
     public $timestamps = false;
 
     protected $guarded = [];
+    public $timestamps = false;
 
     public function quaters(){
         return $this->hasMany('App\Quater');
