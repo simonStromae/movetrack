@@ -20,8 +20,7 @@ class ForgotPasswordController extends Controller
         ]);
 
         if (!emailExist($request->username)){
-            connectify('error', 'Email Erroné', 'l\'email entré n\'existe pas. Veuillez réessayer !');
-            return redirect()->route('reset.email');
+            return redirect()->route('reset.email')->withErrors(['username'=>'L\'email renseigné est incorrect ! Veuillez réessayer']);
         }
 
         return redirect()->route('reset.password');
@@ -39,8 +38,7 @@ class ForgotPasswordController extends Controller
         ]);
 
         if (!emailExist($request->username)){
-            connectify('error','Email erroné',  'l\'email entré n\'existe pas. Veuillez réessayez !');
-            return redirect()->route('reset.password');
+            return redirect()->route('reset.password')->withErrors(['username'=>'L\'email renseigné est incorrect ! Veuillez réessayer']);
         }
 
         $user = User::where('username', $request->username)->firstOrFail();

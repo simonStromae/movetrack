@@ -56,14 +56,11 @@
                                 <input type="password" name="password_confirmation" class="form-control form-control rounded-0" placeholder="Confirmation mot de passe">
                             </div>
 
-                            <div class="form-group mt-3">
-                                <button type="submit" class="btn btn-primary btn-md btn-block pl-5 pr-5 rounded-0 shadow-sm">Valider</button>
+                            <div class="form-group mt-3 d-flex justify-content-end">
+                                <a href="{{ route('reset.email') }}" class="btn btn-dark btn-md pl-5 pr-5 rounded-0 shadow-sm">Retour</a>
+                                <button type="submit" class="btn btn-primary btn-md ml-2 px-5 rounded-0 shadow-sm">Valider</button>
                             </div>
                         </form>
-
-                        <p class="text-center">
-                            <i class="fa fa-arrow-left text-primary-2"></i> <a href="{{ route('login') }}" class="text-primary-2">Se Connecter</a>
-                        </p>
                     </div>
                 </div>
             </div>

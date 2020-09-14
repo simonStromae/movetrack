@@ -26,7 +26,7 @@
         </div>
         <div class="row form-inline align-item-center d-flex justify-content-center">
             @guest
-                <a href="{{ route('login') }}" class="shadow-sm rounded-0 btn btn-outline-primary btn-md mb-2 text-sm">Se connecter</a>
+                <a href="{{ route('login') }}" class="rounded-0 btn btn-outline-primary btn-md mb-2 text-sm">Se connecter</a>
             @else
                 <div class="dropdown">
                     <a href="#" class="text-primary-2 account m-3 text-sm font-weight-bold" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             @endguest
-                <a href="{{ route('add-track') }}" class="shadow-sm rounded-0 btn btn-md btn-danger mx-2 mb-2 text-sm">Entrer votre besoin</a>
+                <a href="{{ route('add-track') }}" class="rounded-0 btn btn-md btn-danger mx-2 mb-2 text-sm">Entrer votre besoin</a>
         </div>
     </div>
 </nav>
