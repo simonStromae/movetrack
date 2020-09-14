@@ -9,11 +9,11 @@
                 <div class="mt-3 mr-4">
                     <h6 class="text-md text-primary-2 text-right font-weight-bold"><a href="{{ route('welcome') }}"><img src="/front-office/brand/logo.png" width="125"></a></h6>
 
-                    <p class="text-xs text-right">
+                    <p class="text-right">
                         Lorem ipsum dolor sit amet tempor incid <br> ut labore et dolore magna aliqua.
                     </p>
 
-                    <a href="{{ route('login') }}" class="btn btn-sm rounded-0 float-right btn-outline-dark text-xs text-uppercase">
+                    <a href="{{ route('login') }}" class="mt-3 btn btn-sm rounded-0 float-right btn-outline-dark text-uppercase">
                         Se connecter
                     </a>
                 </div>
@@ -27,18 +27,18 @@
 
                     <h1 class="mt-3 mb-4 text-capitalize h3 font-weight-bold text-dark text-center">Inscription</h1>
 
-                    <button class="btn btn-sm btn-block rounded-0 shadow-sm text-dark text-xs">S'enregister avec Google</button>
+                    <button class="btn btn-sm btn-block rounded-0 shadow-sm text-dark ">S'enregister avec Google</button>
 
-                    <p class="text-uppercase text-xs text-center mt-4">
+                    <p class="text-uppercase text-center mt-4">
                         <i class="divider"></i> Ou
                     </p>
 
-                    <div class="text-xs m-t-5">
+                    <div class="text-xs mt-5">
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
 
                             <div class="form-group">
-                                <input type="text" id="nom" name="name" class="@error('name') is-invalid @enderror text-xs form-control rounded-0 bg-transparent" placeholder="Nom" value="{{ old('name') }}" autofocus>
+                                <input type="text" id="nom" name="name" class="@error('name') is-invalid @enderror form-control rounded-0 bg-transparent" placeholder="Nom" value="{{ old('name') }}" autofocus>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -47,8 +47,8 @@
                             </div>
 
                             <div class="form-group m-t-5">
-                                <input type="text" id="email" name="email" class="@error('email') is-invalid @enderror text-xs form-control rounded-0 bg-transparent" placeholder="Adresse E-mail" value="{{ old('username') }}" autocomplete="email">
-                                @error('email')
+                                <input type="text" id="email" name="username" class="@error('username') is-invalid @enderror form-control rounded-0 bg-transparent" placeholder="Adresse E-mail" value="{{ old('username') }}" autocomplete="email">
+                                @error('username')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -56,7 +56,7 @@
                             </div>
 
                             <div class="form-group m-t-5">
-                                <input type="password" id="password" name="password" class="@error('password') is-invalid @enderror text-xs form-control rounded-0 bg-transparent" placeholder="Mot de passe">
+                                <input type="password" id="password" name="password" class="@error('password') is-invalid @enderror form-control rounded-0 bg-transparent" placeholder="Mot de passe">
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -70,7 +70,7 @@
                             </div>
 
                             <div class="form-group mt-3">
-                                <button type="submit" class="btn btn-primary btn-md pl-5 pr-5 rounded-0 text-xs shadow-sm">S'enregistrer</button>
+                                <button type="submit" class="btn btn-primary btn-md pl-5 pr-5 rounded-0 shadow-sm">S'enregistrer</button>
                             </div>
                         </form>
 

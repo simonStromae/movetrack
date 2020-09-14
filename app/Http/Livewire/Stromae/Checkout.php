@@ -75,12 +75,17 @@ class Checkout extends Component
 
         }elseif($this->register){
 
+            if (emailExist($this->email)){
+                smilify('error', 'l\'email utilisé existe déjà. Veuillez réessayez avec un autre ou connectez-vous');
+                return redirect()->route('checkout', $this->track_id);
+            }
+
             $client = new Client();
             $this->addValuesClient($client);
 
             $user = User::create([
                 "name" => $this->name,
-                "email" => $this->email,
+                "username" => $this->email,
                 "password" => Hash::make('12345678'),
                 "client_id" => $client->id
             ]);

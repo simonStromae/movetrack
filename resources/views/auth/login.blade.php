@@ -9,11 +9,11 @@
                 <div class="mt-3 mr-4">
                     <h6 class="text-md text-primary-2 text-right font-weight-bold"><a href="{{ route('welcome') }}"><img src="/front-office/brand/logo.png" width="125"></a></h6>
 
-                    <p class="text-xs text-right">
+                    <p class="text-right">
                         Lorem ipsum dolor sit amet tempor incid <br> ut labore et dolore magna aliqua.
                     </p>
 
-                    <a href="{{ route('register') }}" class="btn btn-sm rounded-0 float-right btn-outline-dark text-xs text-uppercase">
+                    <a href="{{ route('register') }}" class="mt-3 btn btn-sm rounded-0 float-right btn-outline-dark text-uppercase">
                         S'enregistrer
                     </a>
                 </div>
@@ -27,9 +27,9 @@
 
                     <h1 class="mt-3 mb-4 text-capitalize h3 font-weight-bold text-dark text-center">Connexion</h1>
 
-                    <button class="btn btn-sm btn-block rounded-0 shadow-sm text-dark text-xs">Connectez-vous avec Google</button>
+                    <button class="btn btn-sm btn-block rounded-0 shadow-sm text-dark">Connectez-vous avec Google</button>
 
-                    <p class="text-uppercase text-xs text-center my-4">
+                    <p class="text-uppercase text-center my-4">
                         <i class="divider"></i> Ou Connectez-vous par email
                     </p>
 
@@ -38,16 +38,16 @@
                             @csrf
 
                             <div class="form-group">
-                                <input type="text" name="email" class="@error('email') is-invalid @enderror text-xs form-control rounded-0 bg-transparent" placeholder="Adresse E-mail" value="{{ old('email') }}" autofocus>
-                                @error('email')
+                                <input type="text" name="username" class="@error('username') is-invalid @enderror form-control rounded-0" placeholder="Adresse E-mail" value="{{ old('username') }}" autofocus>
+                                @error('username')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
 
-                            <div class="form-group m-t-5">
-                                <input type="password" name="password" class="@error('password') is-invalid @enderror text-xs form-control rounded-0 bg-transparent" placeholder="Mot de passe">
+                            <div class="form-group">
+                                <input type="password" name="password" class="@error('password') is-invalid @enderror form-control rounded-0" placeholder="Mot de passe">
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -61,12 +61,12 @@
                             </div>
 
                             <div class="form-group mt-3">
-                                <button type="submit" class="btn btn-primary btn-md pl-5 pr-5 rounded-0 text-xs shadow-sm">S'identifier</button>
+                                <button type="submit" class="btn btn-primary btn-md px-5 rounded-0 shadow-sm">S'identifier</button>
                             </div>
 
-                            @if (Route::has('password.request'))
+                            @if (Route::has('reset.email'))
                                 <div class="form-group">
-                                    <a href="{{ route('password.request') }}" class="text-danger">Mot de passe oublié ?</a>
+                                    <a href="{{ route('reset.email') }}" class="text-danger">Mot de passe oublié ?</a>
                                 </div>
                             @endif
                         </form>

@@ -35,8 +35,11 @@
                     <h5 class="h5 card-title mt-3 text-primary">De quoi avez-vous besoin ?</h5>
                     <p class="card-subtitle m-2 p-1">Entrer les informations et descriptions du produit que vous souhaitez obtenir.</p>
                 </div>
-
-                @livewire('stromae.add-track')
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 mx-auto">
+                        @livewire('stromae.add-track')
+                    </div>
+                </div>
             </div>
         </div>
     </div>

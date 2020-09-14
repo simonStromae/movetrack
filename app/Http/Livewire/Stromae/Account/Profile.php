@@ -65,7 +65,7 @@ class Profile extends Component
             'email' => 'required|email'
         ]);
 
-        user()->email = $this->email;
+        user()->username = $this->email;
         user()->save();
 
         $client = user()->client;

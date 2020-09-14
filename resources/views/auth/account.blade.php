@@ -81,7 +81,32 @@
                                             </tr>
                                             </tbody>
                                         </table>
-
+                                        @if(!empty(last_track_emit()->images))
+                                            <div class="mb-4">
+                                                <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+                                                    <ol class="carousel-indicators">
+                                                        @for($i = 0; $i < count(last_track_emit()->images); $i++)
+                                                            <li data-target="#carouselExampleIndicators" data-slide-to="{{ $i }}" class="{{ $i === 0 ? 'active' : '' }}"></li>
+                                                        @endfor
+                                                    </ol>
+                                                    <div class="carousel-inner">
+                                                        @foreach(last_track_emit()->images as $image)
+                                                            <div class="carousel-item @if($loop->first) active @endif">
+                                                                <img class="d-block w-100" src="{{ show_trackImage($image->name) }}" alt="{{ $loop->iteration }}-slide">
+                                                            </div>
+                                                        @endforeach
+                                                    </div>
+                                                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                        <span class="sr-only">Previous</span>
+                                                    </a>
+                                                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                        <span class="sr-only">Next</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        @endif
                                         <strong class="badge badge-warning p-2">En cours de recherche ...</strong>
                                     </div>
                                 </div>

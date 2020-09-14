@@ -3,7 +3,9 @@
 namespace App\Http\Livewire\Stromae;
 
 use App\Category;
+use App\Image;
 use App\Track;
+use Carbon\Carbon;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -17,7 +19,7 @@ class AddTrack extends Component
     public $categorie;
     public $budget;
     public $description;
-    public $image;
+    public $images = [];
 
     public function mount($track = null){
         if (!is_null($track)){
@@ -38,12 +40,16 @@ class AddTrack extends Component
             'categorie' => 'required|numeric',
             'budget' => 'required|numeric',
             'description' => 'required|string',
+            'images.*' => 'image|mimes:jpg,jpeg,png'
         ]);
 
         if (is_null($this->id_track)){
             $track = new Track();
+            $this->id_track = $track->id;
         }else{
             $track = Track::find($this->id_track);
+
+            Image::where('track_id', $track->id)->delete();
         }
 
         $track->designation = $this->designation;
@@ -51,13 +57,28 @@ class AddTrack extends Component
         $track->budget = $this->budget;
         $track->description = $this->description;
         $track->category_id = $this->categorie;
-
+        $this->addImageToDatabase($this->id_track);
 
         $track->save();
 
         smilify('success', 'Votre besoin a été pris en compte');
 
         return redirect()->route('checkout', $track->id);
+    }
+
+    private function addImageToDatabase($id_track){
+        foreach ($this->images as $image) {
+            $img = $image;
+            $currentDate = Carbon::now()->toDateString();
+            $imagename =  'track-'. $currentDate .'-'. uniqid() .'.'. $img->getClientOriginalExtension();
+            $image->storeAs('public/images/tracks', $imagename);
+
+            $images_track = new Image();
+            $images_track->name = $imagename;
+            $images_track->track_id = $id_track;
+            $images_track->save();
+        }
+        return true;
     }
 
     public function render()

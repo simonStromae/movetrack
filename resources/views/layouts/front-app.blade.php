@@ -22,9 +22,9 @@
     @livewireStyles
     @notifyCss
 </head>
-<body class=" @if(!Request::is('login') && !Request::is('register') && !Request::is('password/reset')) d-flex flex-column h-100 @else bg-primary-2 @endif ">
+<body class=" @if(!Request::is('login') && !Request::is('register') && !Request::is('reset/password') && !Request::is('reset/email')) d-flex flex-column h-100 @else bg-primary-2 @endif ">
 
-@if(!Request::is('login') && !Request::is('register') && !Request::is('password/reset'))
+@if(!Request::is('login') && !Request::is('register') && !Request::is('reset/password') && !Request::is('reset/email'))
     @include('layouts.partials.front-office.navbar')
 
     <div class="main">

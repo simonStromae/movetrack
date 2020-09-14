@@ -32,11 +32,17 @@ Route::namespace('Stromae')->group(function(){
 
     Route::prefix('/track-{id}')->group(function(){
         Route::get('/customer-information', 'TrackingController@checkout')->name('checkout');
-        Route::get('/summary', 'TrackingController@summary')->name('recap');
-        Route::get('/finish', 'TrackingController@finish')->name('finish');
+        Route::middleware('auth')->get('/summary', 'TrackingController@summary')->name('recap');
+        Route::middleware('auth')->get('/finish', 'TrackingController@finish')->name('finish');
     });
 
     Route::get('/my-account', 'ProfileController@account')->name('my-account');
+
+    Route::get('/reset/email', 'ForgotPasswordController@showLinkRequestForm')->name("reset.email");
+    Route::post('/reset/email', 'ForgotPasswordController@validateEmailReset')->name("reset.email");
+
+    Route::get('/reset/password', 'ForgotPasswordController@showResetForm')->name("reset.password");
+    Route::post('/reset/password', 'ForgotPasswordController@updatePassword')->name("update.password");
 });
 
 /*

@@ -11,7 +11,7 @@
                         <a href="{{ route('welcome') }}"><img src="/front-office/brand/logo.png" width="125"></a>
                     </h6>
 
-                    <p class="text-xs text-right">
+                    <p class="text-right">
                         Lorem ipsum dolor sit amet tempor incid <br> ut labore et dolore magna aliqua.
                     </p>
                 </div>
@@ -25,17 +25,17 @@
 
                     <h1 class="mt-3 text-capitalize h3 font-weight-bold text-dark text-center">Réinitialisation </h1>
 
-                    <p class="text-xs text-center mt-1">
+                    <p class="text-center mt-1 mb-3">
                         Entrez votre adresse e-mail et nous enverrons des instructions sur comment réinitialiser votre mot de passe
                     </p>
 
-                    <div class="text-xs">
-                        <form method="POST" action="{{ route('password.email') }}">
+                    <div class="mt-4">
+                        <form method="POST" action="{{ route('reset.email') }}">
                             @csrf
 
                             <div class="form-group">
-                                <input name="email" type="text" id="email" class="@error('email') is-invalid @enderror text-xs form-control rounded-0 bg-transparent" placeholder="Adresse E-mail" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                @error('email')
+                                <input name="username" type="text" id="email" class="@error('username') is-invalid @enderror form-control rounded-0" placeholder="Adresse E-mail" value="{{ old('username') }}" autofocus>
+                                @error('username')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
