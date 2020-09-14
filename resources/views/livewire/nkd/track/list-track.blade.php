@@ -31,7 +31,7 @@
 
                     <div class="card-header">
                         <h3 class="card-title font-weight-bold">Liste des Besoins</h3>
-                        <a href="#" class="float-right btn btn-primary btn-sm ml-1"><i class="fas fa-plus-circle mr-1"></i>Ajouter un Besoin</a>
+{{--                        <a href="#" class="float-right btn btn-primary btn-sm ml-1"><i class="fas fa-plus-circle mr-1"></i>Ajouter un Besoin</a>--}}
                     </div>
                     <!-- /.card-header -->
 
@@ -67,8 +67,8 @@
                                 @forelse($tracks as $t)
                                     <tr >
                                         <td><strong>{{$t->reference}}</strong></td>
-                                        <td class=" ">
-                                            <a href="#" style="text-decoration: none">{{$t->designation}}</a></td>
+                                        <td>
+                                            <a href="{{route('backend.track.show', $t->id)}}">{{$t->designation}}</a></td>
                                         <td>
                                             @livewire('nkd.track.status-change',['id_track' => $t->id], key($t->id))
                                         </td>
