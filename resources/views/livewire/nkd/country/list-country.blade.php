@@ -27,7 +27,7 @@
         <div class="card">
 
             <div class="card-header">
-                <h3 class="card-title font-weight-bold">Liste des Besoins</h3>
+                <h3 class="card-title font-weight-bold">Liste des Pays</h3>
                 <a href="{{ route('backend.country.create') }}" class="float-right btn btn-primary btn-sm ml-1"><i class="fas fa-plus-circle mr-1"></i>Ajouter un Pays</a>
             </div>
             <!-- /.card-header -->

@@ -22,7 +22,7 @@ class Track extends Model
         return $this->belongsTo('App\Client');
     }
 
-    public function getBudgetAttribute($value){
-        return "$value FCFA ";
-    }
+//    public function getBudgetAttribute($value){
+//        return "$value FCFA ";
+//    }
 }

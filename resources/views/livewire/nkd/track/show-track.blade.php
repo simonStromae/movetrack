@@ -48,7 +48,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="">
-                            <img src="{{$track->image ?? '/back-office/dist/img/avatar4.png'}}" width="200" alt="" class="img-fluid rounded">
+                            <td class=" d-flex d-inline-block ">
+                                @forelse($track->images as $i)
+                                    <img src="{{show_trackImage($i->name) ?? '/back-office/dist/img/avatar4.png'}}" width="200" class=" rounded">
+                                @empty
+                                    <img src="{{'/back-office/dist/img/avatar4.png'}}" width="45" class=" rounded">
+                                @endforelse
+                            </td>
                             <p>
                                 {{$track->description}}
                             </p>
