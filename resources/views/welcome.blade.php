@@ -74,34 +74,34 @@
             <h1 class="text-center text-dark h1">Comment ça marche ?</h1>
             <div class="row mt-5">
                 <div class="col-md-7 col-sm-12">
-                    <img src="/front-office/brand/track.svg"class="float-left m-4" width="200px">
+                    <img src="/front-office/brand/track.svg"class="float-left m-4" width="250px">
                     <div>
                         <h3 class="text-primary-2 h1">01</h3>
                         <p class="mt-0">
                             <strong class="text-primary-2">Entre ton besoin</strong><br>
-                            Faites votre recherche en remplissant le formulaire. Ce formulaire vous demandera des renseignements précis sur votre besoin.
+                            <span style="font-size:14px">Faites votre recherche en remplissant le formulaire. Ce formulaire vous demandera des renseignements précis sur votre besoin.</span>
                         </p>
                     </div>
                 </div>
 
                 <div class="offset-md-5 col-md-7 col-sm-12">
-                    <img src="/front-office/brand/search.svg" class="float-left m-4" width="200px">
+                    <img src="/front-office/brand/search.svg" class="float-left m-4" width="250px">
                     <div class="mt-5">
                         <h3 class="text-primary-2 h1">02</h3>
                         <p class="mt-0">
                             <strong class="text-primary-2">Movetrack recherche</strong><br>
-                            Une fois votre besoin exprimé, notre équipe se charge de vous le retrouver en un maximum de 48H.
+                            <span style="font-size:14px">Une fois votre besoin exprimé, notre équipe se charge de vous le retrouver en un maximum de 48H.</span>
                         </p>
                     </div>
                 </div>
 
                 <div class="col-md-7 col-sm-12">
-                    <img src="/front-office/brand/delivery.svg" class="float-left m-4" width="200px">
+                    <img src="/front-office/brand/delivery.svg" class="float-left m-4" width="250px">
                     <div>
                         <h3 class="text-primary-2 h1">03</h3>
                         <p class="mt-0">
                             <strong class="text-primary-2">Livraison / Expédition</strong><br>
-                            Que vous soyez dans la ville ou non! aucune crainte à vous faire. Notre équipe de livraison <strong>MOVe4Me</strong> vous l'apporte à votre domicile ou vous l'expédie en 24H.
+                            <span style="font-size:14px">Que vous soyez dans la ville ou non! aucune crainte à vous faire. Notre équipe de livraison <strong>MOVe4Me</strong> vous l'apporte à votre domicile ou vous l'expédie en 24H.</span>
                         </p>
                     </div>
                 </div>

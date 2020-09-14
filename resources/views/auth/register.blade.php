@@ -38,7 +38,7 @@
                             @csrf
 
                             <div class="form-group">
-                                <input type="text" id="nom" name="name" class="@error('name') is-invalid @enderror form-control rounded-0 bg-transparent" placeholder="Nom" value="{{ old('name') }}" autofocus>
+                                <input type="text" id="nom" name="name" class="@error('name') is-invalid @enderror form-control rounded-0" placeholder="Nom" value="{{ old('name') }}" autofocus>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -47,7 +47,7 @@
                             </div>
 
                             <div class="form-group m-t-5">
-                                <input type="text" id="email" name="username" class="@error('username') is-invalid @enderror form-control rounded-0 bg-transparent" placeholder="Adresse E-mail" value="{{ old('username') }}" autocomplete="email">
+                                <input type="text" id="email" name="username" class="@error('username') is-invalid @enderror form-control rounded-0" placeholder="Adresse E-mail" value="{{ old('username') }}" autocomplete="email">
                                 @error('username')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -56,7 +56,7 @@
                             </div>
 
                             <div class="form-group m-t-5">
-                                <input type="password" id="password" name="password" class="@error('password') is-invalid @enderror form-control rounded-0 bg-transparent" placeholder="Mot de passe">
+                                <input type="password" id="password" name="password" class="@error('password') is-invalid @enderror form-control rounded-0" placeholder="Mot de passe">
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
