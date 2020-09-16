@@ -10,8 +10,8 @@ class City extends Model
 
     protected $guarded = [];
 
-    public function quaters(){
-        return $this->hasMany('App\Quater');
+    public function users(){
+        return $this->hasMany('App\User');
     }
 
     public function country(){

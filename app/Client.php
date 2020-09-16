@@ -10,8 +10,8 @@ class Client extends Model
 
     protected $guarded = [];
 
-    public function quater(){
-        return $this->belongsTo('App\Quater');
+    public function city(){
+        return $this->belongsTo('App\City');
     }
 
     public function user(){
