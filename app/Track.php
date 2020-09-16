@@ -14,6 +14,10 @@ class Track extends Model
         return $this->belongsTo('App\Category');
     }
 
+    public function client(){
+        return $this->belongsTo('App\Client');
+    }
+
     public function images(){
         return $this->hasMany('App\Image');
     }

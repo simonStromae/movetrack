@@ -163,3 +163,10 @@ h1,h2,h3,h4,h5,h6{
 .text-xxs{
   font-size: 7px;
 }
+
+.category:hover{
+    cursor:pointer;
+    color: black !important;
+    background-color:#e74a3b !important;
+    transition: .2s;
+}

@@ -85,6 +85,10 @@ Route::view('/livraison-expedition', 'pages.about')->name('about');
 //Contact-page
 Route::view('/contact', 'pages.contact')->name('contact');
 
+Route::get('Foire-aux-questions', function(){
+   return view('pages.stromae.faq');
+})->name('faq');
+
 Route::namespace('Stromae')->group(function(){
     Route::get('/add-track', 'TrackingController@addTrack')->name('add-track');
     Route::get('/add-track/{id}/edit', 'TrackingController@editTrack')->name('edit-track');

@@ -20,7 +20,7 @@
                     <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                 </li>
                 <li class="nav-item {{ $faq ?? '' }}">
-                    <a class="nav-link" href="#">FAQ</a>
+                    <a class="nav-link" href="{{ route('faq') }}">FAQ</a>
                 </li>
             </ul>
         </div>
