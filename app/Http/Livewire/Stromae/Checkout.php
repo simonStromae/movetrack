@@ -31,9 +31,9 @@ class Checkout extends Component
             $this->name = $user->name;
             $this->email = $user->client->email;
             $this->tel = $user->client->phone_number;
-            $this->pays = $user->client->quater->city->country->id;
-            $this->ville = $user->client->quater->city->id;
-            $this->quartier = $user->client->quater->id;
+            $this->pays = $user->client->quater->city->country->id ?? null;
+            $this->ville = $user->client->quater->city->id ?? null;
+            $this->quartier = $user->client->quater->id ?? null;
             $this->repere = $user->client->landmark;
             $this->repere_particulier = $user->client->particular_landmark;
 

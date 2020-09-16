@@ -76,15 +76,15 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Ville</label>
 
-                                <select name="city_id"  wire:model.lazy="city_id" class="form-control @error('city_id') is-invalid @enderror" >
+                                <select name="city_id"  wire:model.lazy="country_id" class="form-control @error('country_id') is-invalid @enderror" >
                                     <option value="">Choisir... </option>
-                                    @forelse($cities as $c)
+                                    @forelse($countries as $c)
                                         <option value="{{$c->id}}">{{$c->name}}</option>
                                     @empty
                                         <span> Aucun pays.</span>
                                     @endforelse
                                 </select>
-                                @error('city_id')
+                                @error('country_id')
                                     <div class="">
                                         <p class="text-sm text-danger">{{$message}}</p>
                                     </div>

@@ -84,3 +84,17 @@
             }
         }
     }
+
+
+    if (!function_exists('try_find_ressource')){
+
+        function try_find_ressource(callable $function ){
+
+            try{
+                $function();
+            }catch (\Exception $e){
+
+                return abort('404');
+            }
+        }
+    }

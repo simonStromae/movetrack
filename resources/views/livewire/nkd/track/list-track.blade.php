@@ -72,8 +72,13 @@
                                         <td>
                                             @livewire('nkd.track.status-change',['id_track' => $t->id], key($t->id))
                                         </td>
-                                        <td><img src="{{$t->image ?? '/back-office/dist/img/avatar4.png'}}" width="45" class=" rounded"></td>
-
+                                        <td class=" d-flex d-inline-block ">
+                                            @forelse($t->images as $i)
+                                               <img src="{{show_trackImage($i->name) ?? '/back-office/dist/img/avatar4.png'}}" width="45" class=" rounded">
+                                            @empty
+                                                <img src="{{'/back-office/dist/img/avatar4.png'}}" width="45" class=" rounded">
+                                            @endforelse
+                                        </td>
                                         <td>{{$t->description}}</td>
 
                                         <td>{{$t->category->name}} </td>

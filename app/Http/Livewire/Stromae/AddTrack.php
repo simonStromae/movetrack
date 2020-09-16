@@ -45,21 +45,23 @@ class AddTrack extends Component
 
         if (is_null($this->id_track)){
             $track = new Track();
-            $this->id_track = $track->id;
+//            $this->id_track = $track->id;
         }else{
             $track = Track::find($this->id_track);
 
             Image::where('track_id', $track->id)->delete();
         }
 
+        $track->reference = uniqid("$this->categorie.");
         $track->designation = $this->designation;
         $track->brand = $this->marque;
         $track->budget = $this->budget;
         $track->description = $this->description;
         $track->category_id = $this->categorie;
-        $this->addImageToDatabase($this->id_track);
 
         $track->save();
+        $this->addImageToDatabase($track->id);
+
 
         smilify('success', 'Votre besoin a été pris en compte');
 

@@ -43,7 +43,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nom </label>
-                                <input type="text" wire:model.lazy="name"  class="form-control @error('name') is-invalid @enderror" id="exampleInputEmail1" placeholder="Nom du pays" value="{{old('name')}}">
+                                <input type="text" wire:model.lazy="name"  class="form-control @error('name') is-invalid @enderror" id="exampleInputEmail1" placeholder="Nom du quartier" value="{{old('name')}}">
                                 @error('name')
                                 <div class="">
                                     <p class="text-sm text-danger">{{$message}}</p>
@@ -55,7 +55,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Abréviation</label>
-                                <input type="text" wire:model.lazy="slug"  class="form-control @error('slug') is-invalid @enderror" id="exampleInputEmail1" placeholder="Abréviation de la ville" value="{{old('slug')}}">
+                                <input type="text" wire:model.lazy="slug"  class="form-control @error('slug') is-invalid @enderror" id="exampleInputEmail1" placeholder="Abréviation du quartier" value="{{old('slug')}}">
                                 @error('slug')
                                 <div class="">
                                     <p class="text-sm text-danger">{{$message}}</p>
@@ -66,14 +66,14 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Pays</label>
+                                <label for="exampleInputEmail1">Ville</label>
 
                                 <select name="city"  wire:model.lazy="city_id" class="form-control @error('city_id') is-invalid @enderror" >
                                     <option value="">Choisir... </option>
                                     @forelse($cities as $c)
                                         <option value="{{$c->id}}">{{$c->name}}</option>
                                     @empty
-                                        <span> Aucun pays.</span>
+                                        <span> Aucun quartier.</span>
                                     @endforelse
                                 </select>
                                 @error('city_id')

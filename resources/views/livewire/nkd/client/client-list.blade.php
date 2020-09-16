@@ -69,11 +69,11 @@
                                 <tr>
                                     <td><img src="{{getUser($c)->avatar ?? '/back-office/dist/img/avatar4.png'}}" width="45" class=" img-circle" alt="{{getUser($c)->name ?? 'Pas de nom'}}"></td>
                                     <td> <a href="{{route('backend.client.show', $c->id)}}" style="text-decoration: none">{{ getUser($c)->name ?? 'Pas de nom'}}</a></td>
-                                    <td>{{$c->email}}</td>
-                                    <td>{{$c->phone_number}} </td>
+                                    <td>{{$c->email ?? ' non défini'}}</td>
+                                    <td>{{$c->phone_number ?? ' non défini'}} </td>
 
-                                    <td>{{$c->quater->name}} </td>
-                                    <td>{{$c->sector}}</td>
+                                    <td>{{$c->quater->name ?? ' non défini'}} </td>
+                                    <td>{{$c->sector ?? ' non défini'}}</td>
                                     <td>
                                         <a class="btn btn-primary btn-xs" href="{{route('backend.track.create', $c->id)}}"><i class="fas fa-plus"></i> track</a>
                                         <a class="btn btn-outline-primary btn-xs" href="{{route('backend.client.edit', $c->id)}}"><i class="fas fa-user-edit"></i></a>

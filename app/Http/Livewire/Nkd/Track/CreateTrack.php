@@ -27,14 +27,13 @@ class CreateTrack extends Component
         $this->categories = Category::all();
         $this->client = Client::find($id_client);
 
-
     }
 
     public function save(){
         $data = $this->validate(TrackService::validate());
 
         $t = new Track();
-        $t->reference = uniqid("$this->category_id.");;
+        $t->reference = uniqid("$this->category_id.");
         $t->designation = $this->designation;
         $t->created_date = date('Y-m-d h:i:s');
         $t->brand = $this->brand;

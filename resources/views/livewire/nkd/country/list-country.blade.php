@@ -27,7 +27,7 @@
         <div class="card">
 
             <div class="card-header">
-                <h3 class="card-title font-weight-bold">Liste des Besoins</h3>
+                <h3 class="card-title font-weight-bold">Liste des Pays</h3>
                 <a href="{{ route('backend.country.create') }}" class="float-right btn btn-primary btn-sm ml-1"><i class="fas fa-plus-circle mr-1"></i>Ajouter un Pays</a>
             </div>
             <!-- /.card-header -->
@@ -57,13 +57,14 @@
                                 </td>
                                 <td>
                                     <a class="btn btn-outline-primary btn-xs" href="{{route('backend.country.edit',$c->id)}}"><i class="fas fa-user-edit"></i></a>
+
                                     <a class="btn btn-outline-danger btn-xs"  href="" data-toggle="modal" data-target="#modal-{{ $c->id }}"><i class="fas fa-trash"></i></a>
 
                                     @include('layouts.partials.delete_modal',
                                        [
                                            'id'=> $c->id,
                                            'name'=> 'Pays',
-                                           "route"=> route('backend.track.destroy', $c->id),
+                                           "route"=> route('backend.country.destroy', $c->id),
                                            "sms"=> "Vouler-vous supprimer définitivement le Pays : $c->name?"
                                        ])
                                 </td>

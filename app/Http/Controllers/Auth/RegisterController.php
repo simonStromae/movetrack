@@ -66,12 +66,12 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $client = new Client();
-        $client->email = $data['email'];
+        $client->email = $data['username'];
         $client->save();
 
         return User::create([
             'name' => $data['name'],
-            'username' => $data['email'],
+            'username' => $data['username'],
             'password' => Hash::make($data['password']),
             'client_id' => $client->id
         ]);
