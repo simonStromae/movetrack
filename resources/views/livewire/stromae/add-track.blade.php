@@ -63,11 +63,20 @@
     <div class="form-group">
         <label for="image" class="title-label">Image <small>(facultatif)</small></label>
         <input type="file" multiple wire:model.lazy="images" id="image" class="@error('image') is-invalid @enderror form-control-file">
-        <small id="emailHelp" class="text-xs form-text text-muted">Vous pouvez insérer une ou plusieurs images.</small>
+        <small id="emailHelp" class="text-xs form-text text-muted">Vous pouvez insérer une ou plusieurs images ( .png  .jpeg )</small>
         @error('image') <div class="invalid-feedback">{{ $message }}</div> @enderror
     </div>
-
-    <div class="form-group">
-        <button wire:click="save" wire:loading.attr="disabled" class="btn btn-primary rounded-0 shadow-sm mt-3 float-right">Suivant</button>
+    <div class="row">
+        <div class="col">
+            <h4 class="mb-2">Frais de livraison</h4>
+            <ul class="font-weight-bold">
+                <li class="mb-2 badge badge-light"><i class="fa fa-check-square-o mr-2"></i> 0 - 25 kg -> 1 000 FCFA</li>
+                <li class="mb-2 badge badge-light"><i class="fa fa-check-square-o mr-2"></i> 25 - 50 kg -> 1 500 FCFA</li>
+                <li class="badge badge-light"><i class="fa fa-check-square-o mr-2"></i> + 50 kg -> Nous vous contactons</li>
+            </ul>
+        </div>
+        <div class="col form-group">
+            <button wire:click="save" wire:loading.attr="disabled" class="btn btn-primary rounded-0 shadow-sm mt-3 float-right">Suivant</button>
+        </div>
     </div>
 </div>

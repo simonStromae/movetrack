@@ -61,28 +61,30 @@
                                     <div class="col-md-8 col-sm-12">
                                         @if(!empty(last_track_emit()))
                                             <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <td>Produit</td>
+                                                        <td>Marque</td>
+                                                        <td>Catégorie</td>
+                                                        <td>Budget</td>
+                                                        <td>Description</td>
+                                                    </tr>
+                                                </thead>
                                                 <tbody class="table-borderless">
-                                                <tr>
-                                                    <td>Produit</td>
+                                                @foreach(last_track_emit() as $track)
+                                                    <tr>
+                                                        <td class="font-weight-bold">
+                                                            <a data-toggle="modal" data-target="detailTrack-{{ $track->id }}"></a>{{ $track->designation }}
+                                                            <strong class="badge badge-warning">{{$track->status }}</strong>
+                                                        </td>
+                                                        <td class="font-weight-bold">{{ $track->brand }}</td>
+                                                        <td class="font-weight-bold">{{ $track->category->name }}</td>
+                                                        <td class="font-weight-bold">{{ $track->budget }}</td>
+                                                        <td class="font-weight-bold">{{ $track->description }}</td>
+                                                    </tr>
 
-                                                    <td class="font-weight-bold">{{ last_track_emit()->designation }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Marque</td>
-                                                    <td class="font-weight-bold">{{ last_track_emit()->brand }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Catégorie</td>
-                                                    <td class="font-weight-bold">{{ last_track_emit()->category->name }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Budget</td>
-                                                    <td class="font-weight-bold">{{ number_format(last_track_emit()->budget, 0, '.', ' ') }} Fcfa</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Description</td>
-                                                    <td class="font-weight-bold">{{ last_track_emit()->description }}</td>
-                                                </tr>
+                                                    @include('layouts.partials.front-office.modal', $track)
+                                                @endforeach
                                                 </tbody>
                                             </table>
                                         @else
@@ -117,12 +119,6 @@
                                                         <span class="sr-only">Next</span>
                                                     </a>
                                                 </div>
-                                            </div>
-                                        @endif
-
-                                        @if(last_track_emit())
-                                            <div class=" badge badge-warning m-3">
-                                                <strong class=" p-2">{{last_track_emit()->status }}</strong>
                                             </div>
                                         @endif
                                     </div>
@@ -160,7 +156,7 @@
                                                 <td class="font-weight-bold">{{ $track->designation  }}</td>
                                                 <td class="font-weight-bold">{{ $track->brand }}</td>
                                                 <td class="font-weight-bold">{{ $track->category->name }}</td>
-                                                <td class="font-weight-bold">{{ number_format($track->budget, 0, '.', ' ') }} Fcfa</td>
+                                                <td class="font-weight-bold">{{ $track->budget }}</td>
                                                 <td class="font-weight-bold">{{ $track->description }}</td>
                                             </tr>
                                         @empty

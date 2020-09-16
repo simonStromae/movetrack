@@ -93,7 +93,7 @@
                         </tr>
                         <tr>
                             <td>Budget</td>
-                            <td class="font-weight-bold">{{ number_format($track->budget, 0, '.', ' ') }} Fcfa</td>
+                            <td class="font-weight-bold">{{ $track->budget }}</td>
                         </tr>
                         </tbody>
                     </table>

@@ -3,7 +3,6 @@
 namespace App\Http\Livewire\Stromae\Account;
 
 use App\City;
-use App\Quater;
 use Livewire\Component;
 
 class Localisation extends Component
@@ -11,32 +10,28 @@ class Localisation extends Component
     public $pays, $ville, $quartier;
 
     public $repere, $repere_particulier;
-    public $countries, $cities = [], $quaters = [];
+    public $countries, $cities = [];
 
     public function mount(){
         $client = user()->client;
 
-        $this->pays = $client->quater->city->country->id;
-        $this->ville = $client->quater->city->id;
-        $this->quartier = $client->quater->id;
+        $this->pays = $client->city->country->id;
+        $this->ville = $client->city->id;
+        $this->quartier = $client->quater_name;
         $this->repere = $client->landmark;
         $this->repere_particulier = $client->particular_landmark;
 
         $this->cities = City::where('country_id', $this->pays)->get();
-        $this->quaters = Quater::where('city_id', $this->ville)->get();
-    }
-
-    public function updatedVille($id_city){
-        $this->quaters = Quater::where('city_id', $id_city)->get();
     }
 
     public function save_position(){
         $this->validate([
-            'quartier' => 'required|numeric'
+            'quartier' => 'required|string'
         ]);
 
         $client = user()->client;
-        $client->quater_id = $this->quartier;
+        $client->quater_name = $this->quartier;
+        $client->city_id = $this->ville;
         $client->save();
 
         notify()->success('Votre localisation a bien été mise a jour');

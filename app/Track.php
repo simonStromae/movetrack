@@ -22,7 +22,7 @@ class Track extends Model
         return $this->hasMany('App\Image');
     }
 
-    /*public function getBudgetAttribute($value){
-        return "$value FCFA ";
-    }*/
+    public function getBudgetAttribute($value){
+        return number_format($value, 0, '.', ' ') ." FCFA ";
+    }
 }

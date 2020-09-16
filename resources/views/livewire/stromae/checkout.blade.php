@@ -76,14 +76,7 @@
 
                 <div class="col-md-4 col-sm-12 form-group">
                     <label for="quater" class="title-label">Quartier</label>
-                    <select wire:model.lazy="quartier" id="quater" class="@error('quartier') is-invalid @enderror form-control rounded-0">
-                        <option>Sélectionnez un quartier...</option>
-                        @forelse($quaters as $quater)
-                            <option value="{{ $quater->id }}">{{ $quater->name }}</option>
-                        @empty
-                            <option disabled>Aucun quartier disponible</option>
-                        @endforelse
-                    </select>
+                    <input type="text" wire:model.lazy="quartier" id="quater" class="@error('quartier') is-invalid @enderror form-control rounded-0">
                     @error('quartier')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

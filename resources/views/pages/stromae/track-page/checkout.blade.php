@@ -41,7 +41,7 @@
                                 </tr>
                                 <tr>
                                     <td>Budget</td>
-                                    <td class="text-right">{{ number_format($track->budget, 0, '.', ' ') }} Fcfa</td>
+                                    <td class="text-right">{{ $track->budget }}</td>
                                 </tr>
                                 <tr>
                                     <td>Description</td>

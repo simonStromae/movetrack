@@ -5,7 +5,6 @@ namespace App\Http\Livewire\Stromae;
 use App\City;
 use App\Client;
 use App\Country;
-use App\Quater;
 use App\Track;
 use App\User;
 use Illuminate\Support\Facades\Auth;
@@ -20,7 +19,7 @@ class Checkout extends Component
 
     public $pays, $ville, $quartier;
 
-    public $countries, $cities = [], $quaters = [];
+    public $countries, $cities = [];
 
     public function mount($id_track){
         $this->track_id = $id_track;
@@ -31,24 +30,18 @@ class Checkout extends Component
             $this->name = $user->name;
             $this->email = $user->client->email;
             $this->tel = $user->client->phone_number;
-            $this->pays = $user->client->quater->city->country->id ?? null;
-            $this->ville = $user->client->quater->city->id ?? null;
-            $this->quartier = $user->client->quater->id ?? null;
+            $this->pays = $user->client->city->country->id ?? null;
+            $this->ville = $user->client->city->id ?? null;
+            $this->quartier = $user->client->quater_name;
             $this->repere = $user->client->landmark;
             $this->repere_particulier = $user->client->particular_landmark;
 
             $this->cities = City::where('country_id', $this->pays)->get();
-            $this->quaters = Quater::where('city_id', $this->ville)->get();
         }
     }
 
     public function updatedPays($id_country){
         $this->cities = City::where('country_id', $id_country)->get();
-        $this->quaters = [];
-    }
-
-    public function updatedVille($id_city){
-        $this->quaters = Quater::where('city_id', $id_city)->get();
     }
 
     public function save(){
@@ -60,7 +53,7 @@ class Checkout extends Component
             'tel' => 'required|string',
             'pays' => 'required|numeric',
             'ville' => 'required|numeric',
-            'quartier' => 'required|numeric',
+            'quartier' => 'required|string',
             'repere' => 'required|string'
         ]);
 
@@ -106,7 +99,8 @@ class Checkout extends Component
     private function addValuesClient($client){
         $client->email = $this->email;
         $client->phone_number = $this->tel;
-        $client->quater_id = $this->quartier;
+        $client->quater_name = $this->quartier;
+        $client->city_id = $this->ville;
         $client->landmark = $this->repere;
         $client->particular_landmark = $this->repere_particulier;
         $client->save();
