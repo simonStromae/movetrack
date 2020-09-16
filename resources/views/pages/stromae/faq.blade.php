@@ -22,64 +22,35 @@
     </div>
     <div class="container">
         <div class="row my-4 text-center">
-            <div class="category shadow-sm col mr-2 p-4 font-weight-bold"><i class="fa fa-clock-o fa-2x mb-2"></i><br> Commencer</div>
-            <div class="category col mr-2 p-4 bg-danger text-white shadow font-weight-bold"><i class="fa fa-shopping-bag fa-2x mb-2"></i><br> Suivi</div>
-            <div class="category shadow-sm col mr-2 p-4 font-weight-bold"><i class="fa fa-paper-plane fa-2x mb-2"></i><br> Expedition</div>
-            <div class="category shadow-sm col p-4 font-weight-bold"><i class="fa fa-shipping-fast fa-2x mb-2"></i><br> Livraison</div>
+            @foreach($faq_categories as $c)
+                <a href="{{ route('faq', $c->id) }}" class="category shadow-sm {{ active($c->id, $faqs->first()->faqCategory->id) }} col mr-2 p-3 font-weight-bold">{{ $c->name }}</a>
+            @endforeach
         </div>
 
         <div>
             <div class="mt-4">
-                <h4 class="h4 text-center text-danger">Suivi</h4>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br> tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h4 class="h4 text-center text-danger">{{ $faqs->first()->faqCategory->name }}</h4>
+                <p class="text-center">{{ $faqs->first()->faqCategory->description }}</p>
             </div>
 
             <div class="p-3 accordion" id="accordionExample">
-                <div>
-                    <div class="p-2 border-bottom" id="headingOne">
-                        <h6 class="mb-1 align-item-center">
-                            <a class="cursor" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <i class="fa fa-plus mr-2"></i> <span>Collapsible Group Item #1</span>
-                            </a>
-                        </h6>
-                    </div>
+                @foreach($faqs as $f)
+                    <div>
+                        <div class="p-2 border-bottom" id="heading-{{ $f->id }}">
+                            <h6 class="mb-1 align-item-center">
+                                <a class="cursor" data-toggle="collapse" data-target="#collapse-{{ $f->id }}" aria-expanded="true" aria-controls="collapse-{{ $f->id }}">
+                                    <i class="fa fa-plus mr-2"></i> <span>{{ $f->question }}</span>
+                                </a>
+                            </h6>
+                        </div>
 
-                    <div id="collapseOne" class="p-3 collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div class="text-justify">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <div id="collapse-{{ $f->id }}" class="p-3 collapse" aria-labelledby="heading-{{ $f->id }}" data-parent="#accordionExample">
+                            <div class="text-justify">
+                                {{ $f->response }}
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div>
-                    <div class="p-2 border-bottom" id="headingTwo">
-                        <h6 class="mb-1">
-                            <a class="cursor" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <i class="fa fa-plus mr-2"></i> <span>Collapsible Group Item #2</span>
-                            </a>
-                        </h6>
-                    </div>
-                    <div id="collapseTwo" class="p-3 collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                        <div class="text-justify">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="p-2 border-bottom" id="headingThree">
-                        <h6 class="mb-1">
-                            <a class="cursor" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <i class="fa fa-plus mr-2"></i> <span>Collapsible Group Item #3</span>
-                            </a>
-                        </h6>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                        <div class="text-justify">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
 

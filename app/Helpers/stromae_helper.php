@@ -58,3 +58,7 @@ if(!function_exists('user')){
         return check() ? Auth::user() : false;
     }
 }
+
+function active($faq_category_id , $id_faq_category){
+    return $faq_category_id === $id_faq_category ? "bg-danger text-white" : " ";
+}

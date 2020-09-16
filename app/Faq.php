@@ -10,7 +10,9 @@ class Faq extends Model
 
     protected $guarded = [];
 
+    protected $table = "faq";
+
     public function faqCategory(){
-        return $this->belongsTo('App\Faq_category');
+        return $this->belongsTo('App\Faq_category', 'faq_categories_id');
     }
 }

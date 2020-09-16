@@ -13,6 +13,6 @@ class Faq_category extends Model
     protected $guarded = [];
 
     public function faqs(){
-        return $this->hasMany('App\Faq');
+        return $this->hasMany('App\Faq', 'faq_categories_id');
     }
 }
