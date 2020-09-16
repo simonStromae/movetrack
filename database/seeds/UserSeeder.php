@@ -14,6 +14,7 @@ class UserSeeder extends Seeder
         \App\User::insert([
             'name' => 'Admin',
             'username' => 'admin@admin.fr',
+            'password' => \Illuminate\Support\Facades\Hash::make('root'),
             'role_id' => \App\Role::where('name', 'admin')->first()->id
         ]);
     }

@@ -57,12 +57,12 @@
                     return 'Validé';
                 }else if($status === 'in pending') {
 
-                    return 'Recherche du besoin passée';
+                    return 'Recherche du besoin passé';
                 }else if($status === 'decline'){
 
                     return 'Annulé';
                 }elseif($status === 'emit'){
-                    return 'Validé';
+                    return 'Besoin passé';
                 }
             }
     }

@@ -30,7 +30,7 @@
                     <div class="bg-light card mt-5 border-white rounded-0">
                         <div class="card-body">
                             <h6 class="card-title mt-3">Mon Besoin</h6>
-                            <table class="table">
+                            <table class="table table-responsive">
                                 <tr>
                                     <td>Nom</td>
                                     <td class="text-right">{{ $track->designation }}</td>
@@ -45,7 +45,7 @@
                                 </tr>
                                 <tr>
                                     <td>Description</td>
-                                    <td>{{ $track->description }}</td>
+                                    <td >{{ $track->description }}</td>
                                 </tr>
                             </table>
                         </div>

@@ -57,11 +57,11 @@
                         <tbody class="table-borderless">
                         <tr>
                             <td>Ville</td>
-                            <td class="font-weight-bold">{{ client()->quater->city->name }}</td>
+                            <td class="font-weight-bold">{{ client()->city->name }}</td>
                         </tr>
                         <tr>
                             <td>Quartier</td>
-                            <td class="font-weight-bold">{{ client()->quater->name }}</td>
+                            <td class="font-weight-bold">{{ client()->quater_name }}</td>
                         </tr>
                         <tr>
                             <td>Repère</td>

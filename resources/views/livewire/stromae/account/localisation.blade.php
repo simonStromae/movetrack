@@ -5,7 +5,7 @@
             <h6 class="">Localisation</h6><hr>
 
             <div class="row">
-                <p class="col-md-4 col-sm-12" style="font-size: 12px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                <p class="d-none d-md-block col-md-4 col-sm-12" style="font-size: 12px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua.</p>
                 <div class="col-md-8 col-sm-12">
                     <div class="row">
@@ -48,7 +48,7 @@
             <h6 class="">Repère</h6><hr>
 
             <div class="row">
-                <p class="col-md-4 col-sm-12" style="font-size: 12px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                <p class="d-none d-md-block col-md-4 col-sm-12" style="font-size: 12px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua.</p>
                 <div class="col-md-8 col-sm-12">
                     <div class="row">

@@ -69,9 +69,8 @@ class Checkout extends Component
         }elseif($this->register){
 
             if (emailExist($this->email)){
-                return redirect()->route('checkout', $this->track_id)->withErrors([
-                    'email' => 'l\'email utilisé existe déjà. Veuillez réessayez avec un autre ou connectez-vous'
-                ]);
+                notify()->error('L\'email renseigné existe déjà ! Veuillez entrer un autre email');
+                return redirect()->route('checkout', $this->track_id);
             }
 
             $client = new Client();
