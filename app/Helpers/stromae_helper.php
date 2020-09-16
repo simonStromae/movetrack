@@ -43,7 +43,7 @@ if (!function_exists('client_tracks')){
 
 if(!function_exists('last_track_emit')){
     function last_track_emit(){
-        return client()->tracks->where('status', 'emit')->last();
+        return client()->tracks->where('status', 'emit');
     }
 }
 
