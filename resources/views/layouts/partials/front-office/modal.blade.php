@@ -52,6 +52,18 @@
                                 @if($track->status === "success")
                                     <p>Date livraison : {{ $track->date_delivery }}</p>
                                     <p>Frais livraison : {{ $track->delivery_price }}</p>
+
+                                @else
+                                    <div class="my-3 row">
+                                        <div class="col">
+                                            <h4 class="mb-2 text-black">Frais de livraison</h4>
+                                            <ul class="font-weight-bold">
+                                                <li class="mb-2 badge badge-light"><i class="fa fa-check-square-o mr-2"></i> 0 - 25 kg -> 1 000 FCFA</li>
+                                                <li class="mb-2 badge badge-light"><i class="fa fa-check-square-o mr-2"></i> 25 - 50 kg -> 1 500 FCFA</li>
+                                                <li class="badge badge-light"><i class="fa fa-check-square-o mr-2"></i> + 50 kg -> Nous vous contactons</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 @endif
                                 <span class="badge badge-warning">{{ get_status($track->status) }}</span>
                             </div>
