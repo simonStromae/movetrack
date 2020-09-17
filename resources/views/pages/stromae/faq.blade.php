@@ -12,18 +12,20 @@
     <div class="container">
         <div class="mt-4 text-center">
             <h3 class="h3 text-primary-2">Salut, Comment pouvons-nous vous aidez ?</h3>
-            <div class="mt-3 w-75 form-group mx-auto">
+            {{--<div class="mt-3 w-75 form-group mx-auto">
                 <form>
                     <input type="search" class="form-control rounded-0" placeholder="Posez une question...">
                 </form>
-            </div>
-            <p class="my-4">Ou choisissez une catégorie pour trouver rapidement l'aide dont vous avez besoin</p>
+            </div>--}}
+            <p class="my-4"><!--Ou--> Choisissez une catégorie pour trouver rapidement l'aide dont vous avez besoin</p>
         </div>
     </div>
     <div class="container">
         <div class="row my-4 text-center">
             @foreach($faq_categories as $c)
-                <a href="{{ route('faq', $c->id) }}" class="category shadow-sm {{ active($c->id, $faqs->first()->faqCategory->id) }} col mr-2 p-3 font-weight-bold">{{ $c->name }}</a>
+                @if(count($c->faqs)>0)
+                    <a href="{{ route('faq', $c->id) }}" class="category shadow-sm {{ active($c->id, $faqs->first()->faqCategory->id) }} col mr-2 p-3 font-weight-bold">{{ $c->name }}</a>
+                @endif
             @endforeach
         </div>
 

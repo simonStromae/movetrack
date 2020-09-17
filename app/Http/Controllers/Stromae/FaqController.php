@@ -13,9 +13,12 @@ class FaqController extends Controller
         $faq_categories = Faq_category::all();
 
         if (is_null($id)){
-            $id = $faq_categories->first()->id;
+            $id = Faq_category::firstOrFail()->id;
+        }else{
+            $id = Faq_category::findOrFail($id)->id;
         }
-        $faqs = Faq::where('faq_categories_id', $id);
+
+        $faqs = Faq::where('faq_categories_id', $id)->get();
 
         return view('pages.stromae.faq', compact('faq_categories', 'faqs'));
     }
